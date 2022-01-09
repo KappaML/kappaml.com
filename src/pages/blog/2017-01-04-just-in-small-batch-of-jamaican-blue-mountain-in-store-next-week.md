@@ -1,34 +1,23 @@
 ---
-templateKey: 'blog-post'
-title: 'Just in: small batch of Jamaican Blue Mountain in store next week'
-date: 2017-01-04T15:04:10.000Z
+templateKey: blog-post
+title: The Kappa Architecture for Online Machine Learning
+date: 2022-01-09T14:45:53.634Z
+description: The evolution of the Lambada architecture into Kappa for Analytics
+  and Online Machine Learning
 featuredpost: true
-description: >-
-  We’re proud to announce that we’ll be offering a small batch of Jamaica Blue
-  Mountain coffee beans in our store next week.
+featuredimage: /img/kappa-architecture.png
 tags:
-  - jamaica
-  - green beans
-  - flavor
-  - tasting
+  - architecture
+  - engineering
 ---
+First, a hybrid approach called the lambda architecture was introduced. This approach involves having a batch layer, a speed (stream) layer, and a serving layer. The lambda architecture provides a good balance between speed and reliability. However, the complexity introduced by having both batch and streaming pipelines can make such an architecture hard to maintain, migrate or reorganise . Due to the evolution of distributed big data systems such as Apache Kafka and Apache Spark that benefit from increased fault tolerance and availability, a new approach that removes the batch layer emerged: the kappa architecture.
 
-We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.
+These architectures are suitable for processing streaming data coming from various sources such as web analytics, sensors, application and access logs, etc. Additionally, OLTP databases can also be transformed into a data stream by replaying the operations of the database. This approach is known as Change Data Capture (CDC) and the products implementing it usually rely on monitoring the binary log of the DBMS. This stream of DB changes enables the development of more powerful real-time BI and audit use cases but it introduces data integrity concerns and configuration complexity which are usually solved in products implementing CDC. By using this unified approach, all data sources can be considered a stream and the same methods, tools, and algorithms can be used for various use cases.
 
-Blue Mountain Peak is the highest mountain in Jamaica and one of the highest peaks in the Caribbean at 7,402 ft. It is the home of Blue Mountain coffee and their famous tours. It is located on the border of the Portland and Saint Thomas parishes of Jamaica.
+### Kappa Architecture for Analytics
 
-## A little history
+![ Kappa Architecture for Analytics](/img/kappa-architecture.png " Kappa Architecture for Analytics")
 
-The Blue Mountains are considered by many to be a hiker's and camper's paradise. The traditional Blue Mountain trek is a 7-mile hike to the peak and consists of a 3,000-foot increase in elevation. Jamaicans prefer to reach the peak at sunrise, thus the 3–4 hour hike is usually undertaken in darkness. Since the sky is usually very clear in the mornings, Cuba can be seen in the distance.
+### Kappa Architecture for Online Machine Learning
 
->Some of the plants found on the Blue Mountain cannot be found anywhere else in the world and they are often of a dwarfed sort.
-
-This is mainly due to the cold climate which inhibits growth. The small coffee farming communities of Claverty Cottage and Hagley Gap are located near the peak.
-
-## What you need to know before trying
-
-Jamaican Blue Mountain Coffee or Jamaica Blue Mountain Coffee is a classification of coffee grown in the Blue Mountains of Jamaica. The best lots of Blue Mountain coffee are noted for their mild flavor and lack of bitterness. Over the past few decades, this coffee has developed a reputation that has made it one of the most expensive and sought-after coffees in the world. Over 80% of all Jamaican Blue Mountain Coffee is exported to Japan. In addition to its use for brewed coffee, the beans are the flavor base of Tia Maria coffee liqueur.
-
-Jamaican Blue Mountain Coffee is a globally protected certification mark, meaning only coffee certified by the Coffee Industry Board of Jamaica can be labeled as such. It comes from a recognized growing region in the Blue Mountain region of Jamaica, and its cultivation is monitored by the Coffee Industry Board of Jamaica.
-
-The Blue Mountains are generally located between Kingston to the south and Port Antonio to the north. Rising 7,402 ft, they are some of the highest mountains in the Caribbean. The climate of the region is cool and misty with high rainfall. The soil is rich, with excellent drainage. This combination of climate and soil is considered ideal for coffee.
+![ Kappa Architecture for Analytics](/img/kappa-ml-architecture.png " Kappa Architecture for Analytics")
