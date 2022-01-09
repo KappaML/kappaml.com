@@ -12,7 +12,7 @@ class BlogRollTemplate extends React.Component {
       <div className="flex flex-col">
         {posts &&
           posts.map(({ node: post }) => (
-            <article className="px-8 py-6 border rounded-lg shadow-lg" key={post.id}>
+            <article className="px-8 py-6 bg-white border rounded-lg shadow-lg" key={post.id}>
               <header className='flex flex-col md:flex-row'>
                 {post.frontmatter.featuredimage ? (
                   <div className="w-full pt-12">
@@ -27,7 +27,7 @@ class BlogRollTemplate extends React.Component {
                 <div>
                   <p className="my-4 text-xl">
                     <Link
-                      className="font-bold text-gray-800 hover:text-gray-700"
+                      className="font-bold text-gray-900 hover:text-gray-700"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}

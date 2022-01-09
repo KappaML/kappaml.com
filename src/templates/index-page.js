@@ -18,34 +18,34 @@ export const IndexPageTemplate = ({
 
   return (
     <>
-      <section className="flex justify-center p-4 pt-8 text-center">
-        <h1 className="text-6xl font-extrabold leading-tight text-gray-800">
+      <section className="flex justify-center my-8 text-center">
+        <h1 className="text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl lg:text-6xl">
           {title}
         </h1>
       </section>
 
       <section className="flex justify-center p-4 text-center">
-        <h2 className="text-2xl text-gray-600">
+        <h2 className="text-xl md:text-2xl">
           {heading}
         </h2>
       </section>
 
 
-      <section className="my-8">
+      <section className="my-16">
         <GatsbyImage className="w-full border rounded-lg shadow-lg" image={heroImage} alt="Hero Image Kappa Architecture Diagram" />
       </section>
 
 
-      <section className="my-8">
-        <h3 className="my-8 text-3xl font-bold text-gray-800">
+      <section className="my-16">
+        <h3 className="my-6 text-3xl font-bold text-gray-900">
           {intro.heading}
         </h3>
-        <p className="text-xl text-gray-600">{intro.description}</p>
+        <p className="text-xl">{intro.description}</p>
         <Features features={intro.blurbs} />
       </section>
 
-      <section className="my-8">
-        <h3 className="my-8 text-3xl font-bold text-gray-800">
+      <section className="my-16">
+        <h3 className="my-8 text-3xl font-bold text-gray-900">
           Latest blog posts
         </h3>
         <BlogRoll />

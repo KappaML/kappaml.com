@@ -14,7 +14,7 @@ const FeatureGrid = ({ features }) => (
             </div>
             <p className="ml-16 text-lg font-medium leading-6 text-gray-900">{item.name}</p>
           </dt>
-          <dd className="mt-2 ml-16 text-base text-gray-500">{item.text}</dd>
+          <dd className="mt-2 ml-16">{item.text}</dd>
         </div>
       ))}
     </dl>

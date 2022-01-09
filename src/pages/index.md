@@ -19,8 +19,8 @@ intro:
     - image: /img/efficient.png
       name: Efficient
       text: >
-        The training process happens on the fly and do no have to be retrained,
-        resulting in a low compute power required.
+        The training process of a model happens over time. The models does no have to 
+        be retrained, resulting in a low compute power required.
     - image: /img/versatile.png
       name: Versatile
       text: >
