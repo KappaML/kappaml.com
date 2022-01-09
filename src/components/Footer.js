@@ -20,25 +20,28 @@ const Footer = class extends React.Component {
           <div className="flex col-span-2 space-x-32">
             <div className="flex flex-col">
               <div className="mb-2 font-bold uppercase">Company</div>
-              <Link to="/about" className="mt-1">About</Link>
-              <Link to="/blog" className="mt-1">Blog</Link>
-              <Link to="/about#careers" className="mt-1">Careers</Link>
+              <Link to="/about" className="mt-2">About</Link>
+              <Link to="/blog" className="mt-2">Blog</Link>
+              <Link to="/about#careers" className="mt-2">Careers</Link>
             </div>
             <div className="flex flex-col">
               <div className="mb-2 font-bold uppercase">Community</div>
               <a href="https://github.com/KappaML"
                 target="_blank"
-                rel="noopener noreferrer">GitHub
+                rel="noopener noreferrer"
+                className="mt-2">
+                GitHub
               </a>
               <a href="https://www.linkedin.com/company/kappaml"
                 target="_blank"
-                rel="noopener noreferrer">LinkedIn
+                rel="noopener noreferrer" className="mt-2">
+                LinkedIn
               </a>
             </div>
           </div>
           <div className="flex flex-col">
             <div className="mb-2 font-bold uppercase">Subscribe to our newsletter</div>
-            <p className="mt-1 mb-2">
+            <p className="mt-2 mb-2">
               Subscribe to our newsletter for the latest news and product updates.
             </p>
             <form
