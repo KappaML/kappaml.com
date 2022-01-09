@@ -9,7 +9,7 @@ button {
 
 .button {
   @apply px-4 py-3 font-semibold transition duration-500 rounded-lg focus:outline-none focus:ring;
-  @apply text-white bg-cyan-500 hover:bg-cyan-600
+  @apply text-white bg-primary hover:bg-cyan-600
 }
 
 .button[disabled] {

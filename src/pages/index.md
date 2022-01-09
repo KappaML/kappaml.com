@@ -1,9 +1,8 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
+title: Automated Machine Learning for Streaming Data
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: Create, manage, and deploy online-learning machine learning models in production.
 mainpitch:
   title: Why KappaML
   description: >

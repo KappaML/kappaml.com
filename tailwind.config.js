@@ -3,10 +3,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "primary": "#13A2AD",
+      },
+    },
+    plugins: [
+      require('@tailwindcss/typography'),
+      require('@tailwindcss/forms'),
+    ],
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/forms'),
-  ],
 }

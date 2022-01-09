@@ -1,19 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
-import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
   title,
   heading,
-  subheading,
   mainpitch,
   description,
   intro,
@@ -22,7 +20,23 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+
+      <section class="flex justify-center text-center p-4 pt-8">
+        <h1 class="font-extrabold text-gray-800 text-6xl leading-tight">
+          {title}
+        </h1>
+      </section>
+
+      <section class="flex justify-center text-center p-4">
+        <p class="text-gray-600 text-2xl">
+          Create, manage, and deploy online-learning machine learning models in production.
+        </p>
+      </section>
+
+
+      <section class="flex justify-center p-4 mb-16 md:px-16 lg:px-32">
+        <GatsbyImage className="w-full" image={heroImage} />
+      </section>
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -78,7 +92,6 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
-  subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -95,7 +108,6 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -125,7 +137,6 @@ export const pageQuery = graphql`
           }
         }
         heading
-        subheading
         mainpitch {
           title
           description
