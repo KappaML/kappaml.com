@@ -8,9 +8,9 @@ module.exports = {
         "primary": "#13A2AD",
       },
     },
-    plugins: [
-      require('@tailwindcss/typography'),
-      require('@tailwindcss/forms'),
-    ],
   },
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+  ],
 }
