@@ -32,7 +32,7 @@ export const IndexPageTemplate = ({
 
 
       <section className="my-8">
-        <GatsbyImage className="w-full border rounded-lg" image={heroImage} alt="Hero Image Kappa Architecture Diagram" />
+        <GatsbyImage className="w-full border rounded-lg shadow-lg" image={heroImage} alt="Hero Image Kappa Architecture Diagram" />
       </section>
 
 

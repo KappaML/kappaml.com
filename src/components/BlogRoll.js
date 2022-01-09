@@ -27,21 +27,21 @@ class BlogRollTemplate extends React.Component {
                 <div>
                   <p className="my-4 text-xl">
                     <Link
-                      className="font-bold text-gray-900 hover:text-gray-700"
+                      className="font-bold text-gray-800 hover:text-gray-700"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
-                    <span className="text-gray-500">
+                    <span className="text-gray-600">
                       {post.frontmatter.date}
                     </span>
                   </p>
-                  <p className="text-gray-700">
+                  <p className="text-gray-600">
                     {post.excerpt}
                     <br />
                     <br />
-                    <Link className="button" to={post.fields.slug}>
+                    <Link className="inline-block button" to={post.fields.slug}>
                       Keep Reading →
                     </Link>
                   </p>

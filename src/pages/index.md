@@ -6,22 +6,22 @@ heading: Create, manage, and deploy online-learning machine learning models in
   production.
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/adaptive.png
       name: Adaptive
       text: >
         Can adapt to changes in the underlying data and
         overcome concept-drift without retraining.
-    - image: /img/coffee-gear.png
+    - image: /img/simple.png
       name: Simple
       text: >
         Can be deployed to production in minutes, and can be
         easily managed and monitored. 
-    - image: /img/tutorials.png
+    - image: /img/efficient.png
       name: Efficient
       text: >
         The training process happens on the fly and do no have to be retrained,
         resulting in a low compute power required.
-    - image: /img/meeting-space.png
+    - image: /img/versatile.png
       name: Versatile
       text: >
         More and more problems can now be solved with online machine learning. KappaML offers
