@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
@@ -49,11 +49,6 @@ export const IndexPageTemplate = ({
           Latests blog posts
         </h3>
         <BlogRoll />
-        {/* <div className="my-8">
-          <Link className="button" to="/blog">
-            Read more
-          </Link>
-        </div> */}
       </section>
     </>
   );
