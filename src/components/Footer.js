@@ -30,6 +30,10 @@ const Footer = class extends React.Component {
                 target="_blank"
                 rel="noopener noreferrer">GitHub
               </a>
+              <a href="https://www.linkedin.com/company/kappaml"
+                target="_blank"
+                rel="noopener noreferrer">LinkedIn
+              </a>
             </div>
           </div>
           <div className="flex flex-col">
