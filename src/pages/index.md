@@ -9,13 +9,13 @@ intro:
     - image: /img/adaptive.png
       name: Adaptive
       text: >
-        Can adapt to changes in the underlying data and
-        overcome concept-drift without retraining.
+        Can adapt to changes in the underlying data and overcome concept-drift
+        without retraining.
     - image: /img/simple.png
       name: Simple
       text: >
-        Can be deployed to production in minutes, and can be
-        easily managed and monitored. 
+        Can be deployed to production in minutes, and can be easily managed and
+        monitored. 
     - image: /img/efficient.png
       name: Efficient
       text: >
@@ -24,8 +24,9 @@ intro:
     - image: /img/versatile.png
       name: Versatile
       text: >
-        More and more problems can now be solved with online machine learning. KappaML offers
-        a wide range of models and algorithms to solve classification, regression, and recommendation problems.
+        More and more problems can now be solved with online machine learning.
+        KappaML offers a wide range of models and algorithms to solve
+        classification, regression, and recommendation problems.
   heading: Why Online AutoML with KappaML?
   description: |
     Online Machine Learning models are better. Some benefits include:
