@@ -4,13 +4,9 @@ import Layout from "../../components/Layout";
 // eslint-disable-next-line
 export default () => (
   <Layout>
-    <section className="section">
-      <div className="container">
-        <div className="content">
-          <h1>Thank you!</h1>
-          <p>This is a custom thank you page for form submissions</p>
-        </div>
-      </div>
+    <section className="prose">
+      <h1>Thank you!</h1>
+      <h3>Your message was sent successfully. We will try to contact you back as soon as possible.</h3>
     </section>
   </Layout>
 );

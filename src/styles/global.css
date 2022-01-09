@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+button {
+  @apply focus:outline-none !important;
+}
+
+.button {
+  @apply px-4 py-3 font-semibold transition duration-500 rounded-lg focus:outline-none focus:ring;
+  @apply text-white bg-cyan-500 hover:bg-cyan-600
+}
+
+.button[disabled] {
+  @apply text-white bg-gray-500 border-gray-500 cursor-default hover:bg-gray-500 hover:border-gray-500;
+}
+
+form {
+  @apply flex flex-col space-y-6;
+}
+
+input, textarea {
+  @apply w-full rounded;
+}
