@@ -20,7 +20,7 @@ export const BlogPostTemplate = ({
   return (
     <section>
       {helmet || ""}
-      <article className="prose lg:prose-xl max-w-none">
+      <article className="prose lg:prose-lg max-w-none">
         <h1>
           {title}
         </h1>

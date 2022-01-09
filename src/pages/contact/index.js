@@ -37,8 +37,8 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <section>
-          <h1 className="text-5xl font-bold text-center text-gray-900">Contact us</h1>
-          <p className="my-6 text-xl text-center text-gray-500">Send us a message using the form below and we will contact you back soon.</p>
+          <h1 className="text-3xl font-bold text-center text-gray-900 sm:text-4xl lg:text-5xl">Contact us</h1>
+          <p className="my-8 text-xl text-center text-gray-500">Send us a message using the form below and we will contact you back soon.</p>
           <form
             name="contact"
             method="post"

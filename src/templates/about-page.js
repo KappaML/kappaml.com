@@ -10,13 +10,13 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
   return (
     <section >
-      <article className="prose lg:prose-xl max-w-none">
-        <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+      <article className="prose lg:prose-lg max-w-none">
+        <h1 className="text-3xl font-bold text-center text-gray-900 sm:text-4xl lg:text-5xl">
           {title}
-        </h2>
+        </h1>
         <PageContent content={content} />
       </article>
-    </section>
+    </section >
   );
 };
 

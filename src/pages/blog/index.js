@@ -8,8 +8,10 @@ export default class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <section>
-          <h1 className="text-5xl font-bold text-center text-gray-900">KappaML Blog Posts</h1>
-          <p className="my-6 text-xl text-center text-gray-500"></p>
+          <h1 className="pb-8 text-3xl font-bold text-center text-gray-900 sm:text-4xl lg:text-5xl">
+            KappaML Blog
+          </h1>
+          <p className="my-8 text-xl text-center text-gray-500"></p>
           <BlogRoll />
         </section>
       </Layout>
