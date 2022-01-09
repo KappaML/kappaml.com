@@ -41,9 +41,22 @@ const Footer = class extends React.Component {
             <p className="mt-1 mb-2">
               Subscribe to our newsletter for the latest news and product updates.
             </p>
-            <form name="newsletter" method="POST" data-netlify="true">
+            <form
+              name="newsletter"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              action="/">
+              {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+              <input type="hidden" name="form-name" value="contact" />
+              <div hidden>
+                <label>
+                  Don't fill this out:{" "}
+                  <input name="bot-field" onChange={this.handleChange} />
+                </label>
+              </div>
               <div className="flex">
-                <input type="email" name="email" required className="mr-2 rounded-lg" />
+                <input type="email" name="email" required className="mr-3 rounded-lg" />
                 <button type="submit" className="button">Subscribe</button>
               </div>
             </form>
