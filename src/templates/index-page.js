@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
@@ -30,6 +30,19 @@ export const IndexPageTemplate = ({
         </h2>
       </section>
 
+      <section className="flex items-center justify-center my-8">
+        <a
+          className="button"
+          href="https://app.kappaml.com/login"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Try for free
+        </a>
+        <Link to="/contact" className="ml-6 hover:underline">
+          Contact us for more info
+        </Link>
+      </section>
 
       <section className="my-16">
         <GatsbyImage className="w-full border rounded-lg shadow-lg" image={heroImage} alt="Hero Image Kappa Architecture Diagram" />
