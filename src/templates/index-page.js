@@ -30,7 +30,7 @@ export const IndexPageTemplate = ({
         </h2>
       </section>
 
-      <section className="flex items-center justify-center my-16">
+      <section className="flex items-center justify-center my-8">
         <a
           className="button"
           href="https://app.kappaml.com/login"
