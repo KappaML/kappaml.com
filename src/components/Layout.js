@@ -43,7 +43,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <main className="p-4 mx-auto lg:p-8 lg:max-w-7xl">{children}</main>
       <Footer />
     </div>
   );

@@ -1,12 +1,10 @@
 import * as React from "react";
-import { Link } from "gatsby";
-
 import logo from "../img/logo.svg";
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="bg-gray-800 text-gray-400 p-8">
+      <footer className="p-8 text-gray-400 bg-gray-800">
         <div className="grid grid-cols-1 md:grid-cols-4">
           <div>
             <img
