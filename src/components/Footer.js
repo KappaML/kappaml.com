@@ -45,7 +45,7 @@ const Footer = class extends React.Component {
             </form>
           </div>
         </div>
-        <div class="text-center border-t border-gray-700 pt-8 mt-8">
+        <div className="pt-8 mt-8 text-center border-t border-gray-700">
           <p> &copy; 2022 KappaML. All rights reserved.</p>
         </div>
       </footer>

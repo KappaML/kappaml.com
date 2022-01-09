@@ -37,8 +37,8 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <section>
-          <h1 class="text-center text-5xl font-bold text-gray-900">Contact us</h1>
-          <p class="text-center text-xl text-gray-500 my-6">Send us a message using the form below and we will contact you back soon.</p>
+          <h1 className="text-5xl font-bold text-center text-gray-900">Contact us</h1>
+          <p className="my-6 text-xl text-center text-gray-500">Send us a message using the form below and we will contact you back soon.</p>
           <form
             name="contact"
             method="post"
@@ -134,7 +134,7 @@ export default class Index extends React.Component {
                   id={"newsletter"}
                   required={false}
                 />
-                <span class="ml-2">Keep me informed with about KappaML news and updates.</span>
+                <span className="ml-2">Keep me informed with about KappaML news and updates.</span>
               </label>
             </div>
             <div>
