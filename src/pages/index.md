@@ -28,8 +28,11 @@ intro:
         KappaML offers a wide range of models and algorithms to solve
         classification, regression, and recommendation problems.
   heading: Why Online AutoML with KappaML?
-  description: |
-    Online Machine Learning models are better. Some benefits include:
+  description: "Traditionally, machine learning model training is done in a batch
+    setting. Individuals or teams of data scientists select the model and its
+    hyper parameters. Over time, this process is repeated to ensure the model's
+    accuracy. KappaML proposes a different approach: continuously training and
+    tuning an AutoML model on a data stream."
 main:
   heading: Great coffee with no compromises
   description: >
