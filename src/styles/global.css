@@ -22,5 +22,5 @@ form {
 }
 
 input, textarea {
-  @apply w-full rounded;
+  @apply w-full;
 }
