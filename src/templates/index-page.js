@@ -34,9 +34,10 @@ export const IndexPageTemplate = ({
       </section>
 
 
-      <section class="flex justify-center p-4 mb-16 md:px-16 lg:px-32">
-        <GatsbyImage className="w-full" image={heroImage} />
+      <section class="my-8">
+        <GatsbyImage className="w-full border rounded-lg" image={heroImage} />
       </section>
+
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
