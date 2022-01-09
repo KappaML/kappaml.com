@@ -1,8 +1,9 @@
 ---
 templateKey: index-page
 title: Automated Machine Learning for Streaming Data
-image: /img/home-jumbotron.jpg
-heading: Create, manage, and deploy online-learning machine learning models in production.
+image: /img/kappa-ml-architecture.png
+heading: Create, manage, and deploy online-learning machine learning models in
+  production.
 mainpitch:
   title: Why KappaML
   description: >
@@ -10,11 +11,10 @@ mainpitch:
     shouldn't just taste good, it should do good too. We source all of our beans
     directly from small scale sustainable farmers and make sure part of the
     profits are reinvested in their communities.
-description: >-
-  KappaML is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+description: KappaML is the ultimate spot for coffee lovers who want to learn
+  about their java’s origin and support the farmers that grew it. We take coffee
+  production, roasting and brewing seriously and we’re glad to pass that
+  knowledge to anyone.
 intro:
   blurbs:
     - image: /img/coffee.png
