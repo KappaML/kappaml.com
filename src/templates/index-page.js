@@ -46,7 +46,7 @@ export const IndexPageTemplate = ({
 
       <section className="my-8">
         <h3 className="my-8 text-3xl font-bold text-gray-800">
-          Latests blog posts
+          Latest blog posts
         </h3>
         <BlogRoll />
       </section>
