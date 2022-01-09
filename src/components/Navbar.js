@@ -5,7 +5,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import logo from "../img/logo.svg";
 
 const navigation = [
-  { name: 'Products', href: '/products' },
+  // { name: 'Products', href: '/products' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
   { name: 'About', href: '/about' },

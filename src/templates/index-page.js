@@ -12,80 +12,50 @@ export const IndexPageTemplate = ({
   image,
   title,
   heading,
-  mainpitch,
-  description,
   intro,
 }) => {
   const heroImage = getImage(image) || image;
 
   return (
-    <div>
-
-      <section class="flex justify-center text-center p-4 pt-8">
-        <h1 class="font-extrabold text-gray-800 text-6xl leading-tight">
+    <>
+      <section className="flex justify-center p-4 pt-8 text-center">
+        <h1 className="text-6xl font-extrabold leading-tight text-gray-800">
           {title}
         </h1>
       </section>
 
-      <section class="flex justify-center text-center p-4">
-        <p class="text-gray-600 text-2xl">
-          Create, manage, and deploy online-learning machine learning models in production.
-        </p>
+      <section className="flex justify-center p-4 text-center">
+        <h2 className="text-2xl text-gray-600">
+          {heading}
+        </h2>
       </section>
 
 
-      <section class="my-8">
+      <section className="my-8">
         <GatsbyImage className="w-full border rounded-lg" image={heroImage} />
       </section>
 
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="content">
-                  <div className="content">
-                    <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <h3 className="subtitle">{mainpitch.description}</h3>
-                    </div>
-                  </div>
-                  <div className="columns">
-                    <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
-                        {heading}
-                      </h3>
-                      <p>{description}</p>
-                    </div>
-                  </div>
-                  <Features gridItems={intro.blurbs} />
-                  <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Latest stories
-                    </h3>
-                    <BlogRoll />
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/blog">
-                        Read more
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+      <section className="my-8">
+        <h3 className="my-8 text-3xl font-bold text-gray-800">
+          {intro.heading}
+        </h3>
+        <p className="text-xl text-gray-600">{intro.description}</p>
+        <Features features={intro.blurbs} />
       </section>
-    </div>
+
+      <section className="my-8">
+        <h3 className="my-8 text-3xl font-bold text-gray-800">
+          Latests blog posts
+        </h3>
+        <BlogRoll />
+        {/* <div className="my-8">
+          <Link className="button" to="/blog">
+            Read more
+          </Link>
+        </div> */}
+      </section>
+    </>
   );
 };
 
@@ -93,8 +63,6 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -109,8 +77,6 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
         intro={frontmatter.intro}
       />
     </Layout>
@@ -138,10 +104,6 @@ export const pageQuery = graphql`
           }
         }
         heading
-        mainpitch {
-          title
-          description
-        }
         description
         intro {
           blurbs {
@@ -150,6 +112,7 @@ export const pageQuery = graphql`
                 gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
               }
             }
+            name
             text
           }
           heading

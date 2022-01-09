@@ -9,55 +9,45 @@ class BlogRollTemplate extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className="flex flex-col">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                          width:
-                            post.frontmatter.featuredimage.childImageSharp
-                              .gatsbyImageData.width,
-                          height:
-                            post.frontmatter.featuredimage.childImageSharp
-                              .gatsbyImageData.height,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta">
+            <article className="px-8 py-6 rounded-lg shadow-lg" key={post.id}>
+              <header className='flex flex-col md:flex-row'>
+                {post.frontmatter.featuredimage ? (
+                  <div className="w-full pt-12">
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        image: post.frontmatter.featuredimage,
+                        alt: `featured image thumbnail for post ${post.frontmatter.title}`
+                      }}
+                    />
+                  </div>
+                ) : null}
+                <div>
+                  <p className="my-4 text-xl">
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className="font-bold text-gray-900 hover:text-gray-700"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
+                    <span className="text-gray-500">
                       {post.frontmatter.date}
                     </span>
                   </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
-            </div>
+                  <p className="text-gray-700">
+                    {post.excerpt}
+                    <br />
+                    <br />
+                    <Link className="button" to={post.fields.slug}>
+                      Keep Reading →
+                    </Link>
+                  </p>
+                </div>
+              </header>
+            </article>
           ))}
       </div>
     )
@@ -97,11 +87,9 @@ export default function BlogRoll() {
                   featuredimage {
                     childImageSharp {
                       gatsbyImageData(
-                        width: 120
-                        quality: 100
-                        layout: CONSTRAINED
+                        quality: 64
+                        layout: FULL_WIDTH
                       )
-
                     }
                   }
                 }

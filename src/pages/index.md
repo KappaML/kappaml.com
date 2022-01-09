@@ -4,49 +4,31 @@ title: Automated Machine Learning for Streaming Data
 image: /img/kappa-ml-architecture.png
 heading: Create, manage, and deploy online-learning machine learning models in
   production.
-mainpitch:
-  title: Why KappaML
-  description: >
-    KappaML is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
-description: KappaML is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
 intro:
   blurbs:
     - image: /img/coffee.png
+      name: Adaptive
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
+        Can adapt to changes in the underlying data and
+        overcome concept-drift without retraining.
     - image: /img/coffee-gear.png
+      name: Simple
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
+        Can be deployed to production in minutes, and can be
+        easily managed and monitored. 
     - image: /img/tutorials.png
+      name: Efficient
       text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
+        The training process happens on the fly and do no have to be retrained,
+        resulting in a low compute power required.
     - image: /img/meeting-space.png
+      name: Versatile
       text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
-  heading: Why Online AutoML with KappaML
+        More and more problems can now be solved with online machine learning. KappaML offers
+        a wide range of models and algorithms to solve classification, regression, and recommendation problems.
+  heading: Why Online AutoML with KappaML?
   description: |
-    Machine Learning is done in batch. Online is just better.
+    Online Machine Learning models are better. Some benefits include:
 main:
   heading: Great coffee with no compromises
   description: >
