@@ -6,8 +6,8 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="p-8 text-gray-400 bg-gray-800">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
-          <div>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-7">
+          <div className="col-span-2">
             <img
               src={logo}
               alt="KappaML"
@@ -17,29 +17,42 @@ const Footer = class extends React.Component {
               Automated Machine Learning for Streaming Data.
             </div>
           </div>
-          <div className="flex col-span-2 space-x-32">
-            <div className="flex flex-col">
-              <div className="mb-2 font-bold uppercase">Company</div>
-              <Link to="/about" className="mt-2">About</Link>
-              <Link to="/blog" className="mt-2">Blog</Link>
-              <Link to="/about#careers" className="mt-2">Careers</Link>
-            </div>
-            <div className="flex flex-col">
-              <div className="mb-2 font-bold uppercase">Community</div>
-              <a href="https://github.com/KappaML"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2">
-                GitHub
-              </a>
-              <a href="https://www.linkedin.com/company/kappaml"
-                target="_blank"
-                rel="noopener noreferrer" className="mt-2">
-                LinkedIn
-              </a>
-            </div>
+          <div className="flex flex-col">
+            <div className="mb-2 font-bold uppercase">Company</div>
+            <Link to="/about" className="mt-2">About</Link>
+            <Link to="/blog" className="mt-2">Blog</Link>
+            <Link to="/about#careers" className="mt-2">Careers</Link>
           </div>
           <div className="flex flex-col">
+            <div className="mb-2 font-bold uppercase">Community</div>
+            <a href="https://github.com/KappaML"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2">
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/company/kappaml"
+              target="_blank"
+              rel="noopener noreferrer" className="mt-2">
+              LinkedIn
+            </a>
+          </div>
+          <div className="flex flex-col">
+            <div className="mb-2 font-bold uppercase">Developers</div>
+            <a href="https://docs.kappaml.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2">
+              SDK
+            </a>
+            <a href="https://status.kappaml.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2">
+              Status
+            </a>
+          </div>
+          <div className="flex flex-col col-span-2">
             <div className="mb-2 font-bold uppercase">Subscribe to our newsletter</div>
             <p className="mt-2 mb-2">
               Subscribe to our newsletter for the latest news and product updates.
