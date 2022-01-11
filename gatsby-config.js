@@ -3,10 +3,12 @@ module.exports = {
     title: "KappaML",
     description:
       "Automated Machine Learning as a Service for Streaming Data",
+    siteUrl: "https://kappaml.com",
   },
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
@@ -15,6 +17,7 @@ module.exports = {
         name: "uploads",
       },
     },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
