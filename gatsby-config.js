@@ -11,7 +11,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        exclude: ["/404", "/products/**"],
+        excludes: ["/404", "/products/**"],
       },
     },
     {
