@@ -5,7 +5,7 @@ date: 2022-01-09T14:45:53.634Z
 description: The evolution of the Lambada architecture into Kappa for Analytics
   and Online Machine Learning
 featuredpost: true
-featuredimage: /img/kappa-architecture.png
+featuredimage: /img/kappa-ml-architecture.png
 tags:
   - architecture
   - engineering
