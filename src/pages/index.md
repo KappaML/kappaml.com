@@ -2,8 +2,7 @@
 templateKey: index-page
 title: Automated Machine Learning for Streaming Data
 image: /img/kappa-ml-architecture.png
-heading: Create, manage, and deploy online-learning machine learning models in
-  production.
+heading: Create, manage, and deploy online machine learning models in production.
 intro:
   blurbs:
     - image: /img/adaptive.png
