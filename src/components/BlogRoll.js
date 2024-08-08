@@ -42,7 +42,7 @@ class BlogRollTemplate extends React.Component {
                     <br />
                     <br />
                     <Link className="inline-block button" to={post.fields.slug}>
-                      Keep Reading →
+                      Keep reading →
                     </Link>
                   </p>
                 </div>
