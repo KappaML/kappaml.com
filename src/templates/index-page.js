@@ -37,16 +37,16 @@ export const IndexPageTemplate = ({
           target="_blank"
           rel="noopener noreferrer"
         >
-          Try for free
+          Get started
         </a>
         <Link to="/contact" className="ml-6 hover:underline">
           Contact us for more info
         </Link>
       </section>
 
-      <section className="my-16">
+      {/* <section className="my-16">
         <GatsbyImage className="w-full border rounded-lg shadow-lg" image={heroImage} alt="Hero Image Kappa Architecture Diagram" />
-      </section>
+      </section> */}
 
 
       <section className="my-16">
