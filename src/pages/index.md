@@ -8,18 +8,18 @@ intro:
     - image: /img/adaptive.png
       name: Adaptive
       text: >
-        Can adapt to changes in the underlying data and overcome concept-drift
+        Can adapt to changes in the underlying data and overcome concept drift
         without retraining.
     - image: /img/simple.png
       name: Simple
       text: >
-        Can be deployed to production in minutes, and can be easily managed and
+        Can be deployed to production in minutes and can be easily managed and
         monitored. 
     - image: /img/efficient.png
       name: Efficient
       text: >
-        The training process of a model happens over time. The models does no
-        have to  be retrained, resulting in a low compute power required.
+        The training process of a model happens over time. The model does not
+        have to be retrained, resulting in low compute power requirements.
     - image: /img/versatile.png
       name: Versatile
       text: >
@@ -29,7 +29,7 @@ intro:
   heading: Why Online AutoML with KappaML?
   description: "Traditionally, machine learning model training is done in a batch
     setting. Individuals or teams of data scientists select the model and its
-    hyper parameters. Over time, this process is repeated to ensure the model's
+    hyperparameters. Over time, this process is repeated to ensure the model's
     accuracy. KappaML proposes a different approach: continuously training and
     tuning an AutoML model on a data stream."
 main:
@@ -38,12 +38,12 @@ main:
     We hold our coffee to the highest standards from the shrub to the cup.
     That’s why we’re meticulous and transparent about each step of the coffee’s
     journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+    optimal for the plants, farmers, and the local environment.
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products-grid3.jpg
   image2:
-    alt: A green cup of a coffee on a wooden table
+    alt: A green cup of coffee on a wooden table
     image: /img/products-grid2.jpg
   image3:
     alt: Coffee beans
