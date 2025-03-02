@@ -39,11 +39,17 @@ const Footer = class extends React.Component {
           </div>
           <div className="flex flex-col">
             <div className="mb-2 font-bold uppercase">Developers</div>
-            <a href="https://docs.kappaml.com"
+            <a href="https://api.kappaml.com/docs"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2">
-              SDK
+              OpenAPI Docs
+            </a>
+            <a href="https://api.kappaml.com/redoc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2">
+              ReDocs
             </a>
             <a href="https://status.kappaml.com"
               target="_blank"
