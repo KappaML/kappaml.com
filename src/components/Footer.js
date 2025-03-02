@@ -85,7 +85,7 @@ const Footer = class extends React.Component {
           </div>
         </div>
         <div className="pt-8 mt-8 text-center border-t border-gray-700">
-          <p> &copy; 2022 KappaML. All rights reserved.</p>
+          <p> &copy; {new Date().getFullYear()} KappaML. All rights reserved.</p>
         </div>
       </footer>
     );
