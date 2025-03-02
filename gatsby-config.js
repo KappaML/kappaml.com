@@ -82,7 +82,6 @@ module.exports = {
           "G-41L00JVG7K", // Google Analytics / GA
         ],
       },
-    },
-    "gatsby-plugin-netlify", // make sure to keep it last in the array
+    }
   ],
 };
