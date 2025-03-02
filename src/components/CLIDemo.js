@@ -6,6 +6,8 @@ const CLIDemo = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [showResponse, setShowResponse] = useState(false);
   const [typedCommand, setTypedCommand] = useState('');
+  const [autoRotate, setAutoRotate] = useState(true);
+  const [progress, setProgress] = useState(100);
 
   const responses = {
     learn: `{
@@ -57,6 +59,33 @@ const CLIDemo = () => {
   -H 'X-API-Key: KAPPAML_API_KEY'`
   };
 
+  // Auto-rotate tabs effect
+  useEffect(() => {
+    if (!autoRotate) {
+      setProgress(100);
+      return;
+    }
+
+    setProgress(100);
+    const progressInterval = setInterval(() => {
+      setProgress(prev => Math.max(0, prev - (100 / 300))); // Update every 100ms for smooth animation
+    }, 100);
+
+    const rotationInterval = setInterval(() => {
+      const tabs = Object.keys(commands);
+      const currentIndex = tabs.indexOf(activeTab);
+      const nextIndex = (currentIndex + 1) % tabs.length;
+      setActiveTab(tabs[nextIndex]);
+      setProgress(100);
+    }, 30000);
+
+    return () => {
+      clearInterval(rotationInterval);
+      clearInterval(progressInterval);
+    };
+  }, [activeTab, autoRotate]);
+
+  // Typing effect
   useEffect(() => {
     setIsTyping(true);
     setShowResponse(false);
@@ -85,9 +114,17 @@ const CLIDemo = () => {
     };
   }, [activeTab]);
 
+  const handleTabClick = (cmd) => {
+    setActiveTab(cmd);
+    setAutoRotate(false);
+    // Re-enable auto-rotation after 10 seconds
+    const timer = setTimeout(() => setAutoRotate(true), 10000);
+    return () => clearTimeout(timer);
+  };
+
   return (
     <div className="w-full max-w-4xl mx-auto my-8">
-      <div className="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+      <div className="bg-gray-900 rounded-lg shadow-lg overflow-hidden relative">
         {/* Terminal Header */}
         <div className="flex items-center px-4 py-2 bg-gray-800">
           <div className="flex space-x-2">
@@ -100,6 +137,16 @@ const CLIDemo = () => {
           </div>
         </div>
 
+        {/* Progress Bar */}
+        {autoRotate && (
+          <div className="w-full h-1 bg-gray-800">
+            <div 
+              className="h-full bg-blue-500/30 transition-all duration-100 ease-linear"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+        )}
+
         {/* Terminal Tabs */}
         <div className="flex border-b border-gray-700">
           {Object.keys(commands).map((cmd) => (
@@ -110,7 +157,7 @@ const CLIDemo = () => {
                   ? 'text-white bg-gray-700'
                   : 'text-gray-400 hover:text-white hover:bg-gray-800'
               }`}
-              onClick={() => setActiveTab(cmd)}
+              onClick={() => handleTabClick(cmd)}
             >
               {cmd}
             </button>
