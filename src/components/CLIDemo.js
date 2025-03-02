@@ -86,7 +86,7 @@ const CLIDemo = () => {
   }, [activeTab]);
 
   return (
-    <div className="w-full max-w-4xl mx-auto my-8 p-4">
+    <div className="w-full max-w-4xl mx-auto my-8">
       <div className="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
         {/* Terminal Header */}
         <div className="flex items-center px-4 py-2 bg-gray-800">

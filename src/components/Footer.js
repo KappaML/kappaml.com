@@ -20,7 +20,6 @@ const Footer = class extends React.Component {
           <div className="flex flex-col">
             <div className="mb-2 font-bold uppercase">Company</div>
             <Link to="/about" className="mt-2">About</Link>
-            <Link to="/blog" className="mt-2">Blog</Link>
             <Link to="/about#careers" className="mt-2">Careers</Link>
           </div>
           <div className="flex flex-col">
