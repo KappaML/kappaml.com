@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
-const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -74,8 +73,7 @@ exports.createPages = ({ actions, graphql }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
-  fmImagesToRelative(node) // convert image paths for gatsby images
-
+  
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
@@ -84,4 +82,76 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
+}
+
+// Add schema customization to ensure fields exist
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+      fields: Fields
+    }
+    type Frontmatter {
+      title: String
+      templateKey: String
+      date: Date @dateformat
+      featuredpost: Boolean
+      featuredimage: File @fileByRelativePath
+      description: String
+      tags: [String]
+      full_image: File @fileByRelativePath
+      image: File @fileByRelativePath
+      heading: String
+      subheading: String
+      mainpitch: Mainpitch
+      intro: Intro
+      main: Main
+      testimonials: [Testimonials]
+      pricing: Pricing
+    }
+    type Fields {
+      slug: String
+    }
+    type Mainpitch {
+      title: String
+      description: String
+    }
+    type Intro {
+      blurbs: [Blurbs]
+      heading: String
+      description: String
+    }
+    type Blurbs {
+      image: File @fileByRelativePath
+      text: String
+    }
+    type Main {
+      heading: String
+      description: String
+      image1: Image
+      image2: Image
+      image3: Image
+    }
+    type Image {
+      alt: String
+      image: File @fileByRelativePath
+    }
+    type Testimonials {
+      author: String
+      quote: String
+    }
+    type Pricing {
+      heading: String
+      description: String
+      plans: [Plans]
+    }
+    type Plans {
+      description: String
+      items: [String]
+      plan: String
+      price: String
+    }
+  `
+  createTypes(typeDefs)
 }

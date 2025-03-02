@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql, Link } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
@@ -14,8 +14,6 @@ export const IndexPageTemplate = ({
   heading,
   intro,
 }) => {
-  const heroImage = getImage(image) || image;
-
   return (
     <>
       <section className="flex justify-center my-8 text-center">
