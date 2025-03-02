@@ -4,6 +4,105 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
+/* Water-inspired background decoration */
+body {
+  background: linear-gradient(
+    135deg,
+    rgba(245, 250, 255, 0.4) 0%,
+    rgba(240, 248, 255, 0.3) 50%,
+    rgba(235, 246, 255, 0.4) 100%
+  );
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0c50 0 50 100 100 100V0H0z' fill='rgba(200,230,255,0.08)'/%3E%3C/path%3E%3C/svg%3E");
+  background-size: 150px 150px;
+  animation: wave 20s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Floating elements */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(176, 224, 255, 0.12) 0, rgba(176, 224, 255, 0.12) 25px, transparent 25px),
+    radial-gradient(circle at 75% 60%, rgba(176, 224, 255, 0.1) 0, rgba(176, 224, 255, 0.1) 20px, transparent 20px),
+    radial-gradient(circle at 40% 80%, rgba(176, 224, 255, 0.08) 0, rgba(176, 224, 255, 0.08) 30px, transparent 30px);
+  background-size: 300px 300px, 250px 250px, 350px 350px;
+  animation: float 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Additional layer of floating elements */
+.floating-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 65% 35%, rgba(176, 224, 255, 0.1) 0, rgba(176, 224, 255, 0.1) 15px, transparent 15px),
+    radial-gradient(circle at 25% 85%, rgba(176, 224, 255, 0.12) 0, rgba(176, 224, 255, 0.12) 25px, transparent 25px);
+  background-size: 250px 250px, 300px 300px;
+  animation: float-reverse 25s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 150px 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    background-position: 0% 0%, 0% 0%, 0% 0%;
+  }
+  25% {
+    background-position: 80px 40px, -40px 80px, 30px -30px;
+  }
+  50% {
+    background-position: -40px 80px, 60px -40px, -80px 60px;
+  }
+  75% {
+    background-position: 40px -60px, -80px 30px, 40px 90px;
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    background-position: 0% 0%, 0% 0%;
+  }
+  25% {
+    background-position: -40px 40px, 60px -30px;
+  }
+  50% {
+    background-position: 30px -60px, -50px 70px;
+  }
+  75% {
+    background-position: -40px -40px, 40px 40px;
+  }
+}
+
 button {
   @apply focus:outline-none !important;
 }

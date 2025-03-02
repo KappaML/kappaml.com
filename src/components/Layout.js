@@ -8,7 +8,8 @@ import { withPrefix } from "gatsby";
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div className="flex flex-col min-h-screen text-gray-700 bg-neutral-50 font-['Noto_Sans']">
+    <div className="flex flex-col min-h-screen text-gray-700 font-['Noto_Sans']">
+      <div className="floating-particles" aria-hidden="true" />
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
