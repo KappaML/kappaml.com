@@ -6,6 +6,7 @@ import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
+import CLIDemo from "../components/CLIDemo";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -45,6 +46,10 @@ export const IndexPageTemplate = ({
       {/* <section className="my-16">
         <GatsbyImage className="w-full border rounded-lg shadow-lg" image={heroImage} alt="Hero Image Kappa Architecture Diagram" />
       </section> */}
+
+      <section className="my-16">
+        <CLIDemo />
+      </section>
 
 
       <section className="my-16">
