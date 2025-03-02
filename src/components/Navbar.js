@@ -5,7 +5,6 @@ import { Bars3Icon as MenuIcon, XMarkIcon as XIcon } from '@heroicons/react/24/o
 import logo from "../img/logo.svg";
 
 const navigation = [
-  // { name: 'Products', href: '/products' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
   { name: 'About', href: '/about' },
