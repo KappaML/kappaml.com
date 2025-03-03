@@ -46,7 +46,7 @@ export default class Index extends React.Component {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={this.handleSubmit}
-            className="my-4"
+            className="max-w-2xl mx-auto my-8"
           >
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input type="hidden" name="form-name" value="contact" />
@@ -56,8 +56,8 @@ export default class Index extends React.Component {
                 <input name="bot-field" onChange={this.handleChange} />
               </label>
             </div>
-            <div>
-              <label htmlFor={"name"}>
+            <div className="mb-6">
+              <label htmlFor={"name"} className="block mb-2 text-sm font-medium text-gray-700">
                 Your name
               </label>
               <div>
@@ -67,11 +67,13 @@ export default class Index extends React.Component {
                   onChange={this.handleChange}
                   id={"name"}
                   required={true}
+                  className="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
+                  placeholder="John Doe"
                 />
               </div>
             </div>
-            <div>
-              <label htmlFor={"email"}>
+            <div className="mb-6">
+              <label htmlFor={"email"} className="block mb-2 text-sm font-medium text-gray-700">
                 Email
               </label>
               <div>
@@ -81,11 +83,13 @@ export default class Index extends React.Component {
                   onChange={this.handleChange}
                   id={"email"}
                   required={true}
+                  className="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
+                  placeholder="john@example.com"
                 />
               </div>
             </div>
-            <div>
-              <label htmlFor={"phone"}>
+            <div className="mb-6">
+              <label htmlFor={"phone"} className="block mb-2 text-sm font-medium text-gray-700">
                 Phone
               </label>
               <div>
@@ -95,11 +99,13 @@ export default class Index extends React.Component {
                   onChange={this.handleChange}
                   id={"phone"}
                   required={false}
+                  className="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
+                  placeholder="+31 6 1234 5678"
                 />
               </div>
             </div>
-            <div>
-              <label htmlFor={"company"}>
+            <div className="mb-6">
+              <label htmlFor={"company"} className="block mb-2 text-sm font-medium text-gray-700">
                 Company
               </label>
               <div>
@@ -109,11 +115,13 @@ export default class Index extends React.Component {
                   onChange={this.handleChange}
                   id={"company"}
                   required={false}
+                  className="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
+                  placeholder="Company name"
                 />
               </div>
             </div>
-            <div>
-              <label htmlFor={"message"}>
+            <div className="mb-6">
+              <label htmlFor={"message"} className="block mb-2 text-sm font-medium text-gray-700">
                 Message
               </label>
               <div>
@@ -122,10 +130,13 @@ export default class Index extends React.Component {
                   onChange={this.handleChange}
                   id={"message"}
                   required={true}
+                  rows={4}
+                  className="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
+                  placeholder="How can we help you?"
                 />
               </div>
             </div>
-            <div>
+            <div className="mb-6">
               <label className="inline-flex items-center" htmlFor={"newsletter"}>
                 <input
                   type="checkbox"
@@ -133,12 +144,16 @@ export default class Index extends React.Component {
                   onChange={this.handleChange}
                   id={"newsletter"}
                   required={false}
+                  className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
                 />
-                <span className="ml-2">Keep me informed with about KappaML news and updates.</span>
+                <span className="ml-2 text-sm text-gray-700">Keep me informed with about KappaML news and updates.</span>
               </label>
             </div>
             <div>
-              <button className="button" type="submit">
+              <button 
+                className="w-full px-6 py-3 text-base font-medium text-white bg-primary rounded-lg hover:bg-primary/80 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" 
+                type="submit"
+              >
                 Send
               </button>
             </div>
