@@ -6,7 +6,7 @@ const WavesBackground = () => {
     <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
       {/* First wave */}
       <svg
-        className="absolute top-[10%] left-0 w-[125%] h-[300px] animate-wave"
+        className="absolute top-[10%] left-0 w-[200%] h-[25vh] md:h-[30vh] animate-wave"
         viewBox="0 0 1200 200"
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@ const WavesBackground = () => {
 
       {/* Second wave */}
       <svg
-        className="absolute top-[15%] left-0 w-[125%] h-[300px] animate-wave-slow"
+        className="absolute top-[15%] left-0 w-[200%] h-[25vh] md:h-[30vh] animate-wave-slow"
         viewBox="0 0 1200 200"
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ const WavesBackground = () => {
 
       {/* Third wave */}
       <svg
-        className="absolute top-[15%] left-0 w-[125%] h-[300px] animate-wave-slower"
+        className="absolute top-[15%] left-0 w-[200%] h-[25vh] md:h-[30vh] animate-wave-slower"
         viewBox="0 0 1200 200"
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ const WavesBackground = () => {
 
       {/* Fourth wave */}
       <svg
-        className="absolute top-[20%] left-0 w-[125%] h-[300px] animate-wave"
+        className="absolute top-[20%] left-0 w-[200%] h-[25vh] md:h-[30vh] animate-wave"
         viewBox="0 0 1200 200"
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
