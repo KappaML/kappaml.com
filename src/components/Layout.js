@@ -2,14 +2,15 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import WavesBackground from "../components/WavesBackground";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div className="flex flex-col min-h-screen text-gray-700 font-['Noto_Sans']">
-      <div className="floating-particles" aria-hidden="true" />
+    <div className="flex flex-col min-h-screen text-gray-700 font-['Noto_Sans'] relative">
+      <WavesBackground />
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
