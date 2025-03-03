@@ -8,28 +8,28 @@ intro:
     - image: /img/adaptive.png
       name: Adaptive
       text: >
-        Can adapt to changes in the underlying data and overcome concept drift
-        without retraining.
+        Seamlessly adjust to evolving data patterns and mitigate concept drift
+        without resource-intensive retraining cycles.
     - image: /img/simple.png
       name: Simple
       text: >
-        Can be deployed to production in minutes and can be easily managed and
-        monitored. 
+        Deploy to production environments within minutes with intuitive
+        management and comprehensive monitoring capabilities.
     - image: /img/efficient.png
       name: Efficient
       text: >
-        The training process of a model happens over time. The model does not
-        have to be retrained, resulting in low compute power requirements.
+        Leverage continuous model training that eliminates the need for periodic
+        retraining, significantly reducing computational requirements and costs.
     - image: /img/versatile.png
       name: Versatile
       text: >
-        More and more problems can now be solved with online machine learning.
-        KappaML offers a wide range of models and algorithms to solve
-        classification, regression, and recommendation problems.
-  heading: Why Online AutoML with KappaML?
-  description: "Traditionally, machine learning model training is done in a batch
-    setting. Individuals or teams of data scientists select the model and its
-    hyperparameters. Over time, this process is repeated to ensure the model's
-    accuracy. KappaML proposes a different approach: continuously training and
-    tuning an AutoML model on a data stream."
+        Address a growing spectrum of business challenges with our extensive library
+        of online machine learning algorithms optimized for classification, regression,
+        and time series forecasting.
+  heading: Why Choose KappaML for Online AutoML?
+  description: "Traditional machine learning development requires significant expertise
+    and resources for model selection, hyperparameter tuning, and periodic retraining.
+    KappaML transforms this paradigm by offering a streamlined solution that continuously
+    trains and optimizes AutoML models on your data streams, ensuring consistent
+    accuracy and performance over time with minimal operational overhead."
 ---
