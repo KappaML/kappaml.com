@@ -38,6 +38,7 @@ const Footer = class extends React.Component {
               rel="noopener noreferrer" className="mt-2">
               LinkedIn
             </a>
+            <Link to="/partners" className="mt-2">Partners</Link>
           </div>
           <div className="flex flex-col">
             <div className="mb-2 uppercase">Developers</div>
