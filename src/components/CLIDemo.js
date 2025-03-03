@@ -38,8 +38,7 @@ const CLIDemo = () => {
     "features": {
       "feature1": 1.2,
       "feature2": 0.5,
-      "feature3": 3.1,
-      "feature4": 0.8
+      "feature3": 3.1
     },
     "target": 1.2
   }'`,
@@ -50,8 +49,7 @@ const CLIDemo = () => {
     "features": {
       "feature1": 1.2,
       "feature2": 0.5,
-      "feature3": 3.1,
-      "feature4": 0.8
+      "feature3": 3.1
     }
   }'`,
     metrics: `curl -X 'GET' \\
