@@ -6,7 +6,7 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="p-8 text-gray-400 bg-gray-800">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-7">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-7">
           <div className="col-span-2">
             <img
               src={logo}
@@ -18,7 +18,7 @@ const Footer = class extends React.Component {
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="mb-2 font-bold uppercase">Company</div>
+            <div className="mb-2 uppercase">Company</div>
             <Link to="/about" className="mt-2">About</Link>
             <Link to="/contact" className="mt-2">Contact</Link>
             <Link to="/about#careers" className="mt-2">Careers</Link>
@@ -26,7 +26,7 @@ const Footer = class extends React.Component {
             <Link to="/privacy" className="mt-2">Privacy</Link>
           </div>
           <div className="flex flex-col">
-            <div className="mb-2 font-bold uppercase">Community</div>
+            <div className="mb-2 uppercase">Community</div>
             <a href="https://github.com/KappaML"
               target="_blank"
               rel="noopener noreferrer"
@@ -40,7 +40,7 @@ const Footer = class extends React.Component {
             </a>
           </div>
           <div className="flex flex-col">
-            <div className="mb-2 font-bold uppercase">Developers</div>
+            <div className="mb-2 uppercase">Developers</div>
             <a href="https://api.kappaml.com/docs"
               target="_blank"
               rel="noopener noreferrer"
@@ -61,7 +61,7 @@ const Footer = class extends React.Component {
             </a>
           </div>
           <div className="flex flex-col col-span-2">
-            <div className="mb-2 font-bold uppercase">Subscribe to our newsletter</div>
+            <div className="mb-2 uppercase">Subscribe to our newsletter</div>
             <p className="mt-2 mb-2">
               Subscribe to our newsletter for the latest news and product updates.
             </p>
@@ -80,14 +80,20 @@ const Footer = class extends React.Component {
                 </label>
               </div>
               <div className="flex">
-                <input type="email" name="email" required className="mr-3 rounded-lg" />
-                <button type="submit" className="button">Subscribe</button>
+                <input 
+                  type="email" 
+                  name="email" 
+                  required 
+                  className="w-full px-4 py-2 mr-3 text-gray-200 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" 
+                  placeholder="Your email" 
+                />
+                <button type="submit" className="px-6 py-2 text-white bg-primary rounded-lg hover:bg-primary/80 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-800">Subscribe</button>
               </div>
             </form>
           </div>
         </div>
         <div className="pt-8 mt-8 text-center border-t border-gray-700">
-          <p> &copy; {new Date().getFullYear()} KappaML. All rights reserved.</p>
+          <p> &copy; {new Date().getFullYear()} KappaML. Built with 🩵 in Enschede, The Netherlands.</p>
         </div>
       </footer>
     );
