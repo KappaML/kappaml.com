@@ -31,9 +31,9 @@ const CLIDemo = () => {
   };
 
   const commands = {
-    learn: `curl -X 'POST' \\
-  'https://api.kappaml.com/learn' \\
-  -H 'X-API-Key: KAPPAML_API_KEY' \\
+    learn: `curl -X 'POST'
+  'https://api.kappaml.com/learn'
+  -H 'X-API-Key: KAPPAML_API_KEY'
   -d '{
     "features": {
       "feature1": 1.2,
@@ -42,9 +42,9 @@ const CLIDemo = () => {
     },
     "target": 1.2
   }'`,
-    predict: `curl -X 'POST' \\
-  'https://api.kappaml.com/predict' \\
-  -H 'X-API-Key: KAPPAML_API_KEY' \\
+    predict: `curl -X 'POST'
+  'https://api.kappaml.com/predict'
+  -H 'X-API-Key: KAPPAML_API_KEY'
   -d '{
     "features": {
       "feature1": 1.2,
@@ -52,8 +52,8 @@ const CLIDemo = () => {
       "feature3": 3.1
     }
   }'`,
-    metrics: `curl -X 'GET' \\
-  'https://api.kappaml.com/metrics' \\
+    metrics: `curl -X 'GET'
+  'https://api.kappaml.com/metrics'
   -H 'X-API-Key: KAPPAML_API_KEY'`
   };
 
