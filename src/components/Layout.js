@@ -6,7 +6,7 @@ import WavesBackground from "../components/WavesBackground";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, noContainer }) => {
   const { title, description } = useSiteMetadata();
   return (
     <div className="flex flex-col min-h-screen text-gray-700 font-['Noto_Sans'] relative">
@@ -45,7 +45,13 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <main className="flex-grow p-4 mx-auto lg:p-8 lg:max-w-7xl">{children}</main>
+      <main className="flex-grow p-4 mx-auto lg:p-8 lg:max-w-7xl">
+        {noContainer ? children : (
+          <div className="content-container">
+            {children}
+          </div>
+        )}
+      </main>
       <Footer />
     </div>
   );

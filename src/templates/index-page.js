@@ -74,13 +74,46 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
-      <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        intro={frontmatter.intro}
-      />
+    <Layout noContainer>
+      <section className="flex justify-center my-8 text-center">
+        <h1 className="text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl lg:text-6xl">
+          {frontmatter.title}
+        </h1>
+      </section>
+
+      <section className="flex justify-center p-4 text-center">
+        <h2 className="text-xl md:text-2xl">
+          {frontmatter.heading}
+        </h2>
+      </section>
+
+      <section className="flex items-center justify-center my-8">
+        <a
+          className="button"
+          href="https://app.kappaml.com/login"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get started
+        </a>
+        <Link to="/contact" className="ml-6 hover:underline">
+          Contact us for more info
+        </Link>
+      </section>
+
+      <section className="my-8">
+        <CLIDemo />
+      </section>
+
+      <div className="content-container">
+        <section className="my-16">
+          <h3 className="my-6 text-3xl font-bold text-gray-900">
+            {frontmatter.intro.heading}
+          </h3>
+          <p className="text-xl">{frontmatter.intro.description}</p>
+          <Features features={frontmatter.intro.blurbs} />
+        </section>
+      </div>
     </Layout>
   );
 };
