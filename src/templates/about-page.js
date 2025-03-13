@@ -11,7 +11,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   return (
     <section >
       <article className="prose lg:prose-lg max-w-none">
-        <h1 className="text-3xl font-bold text-center text-gray-900 sm:text-4xl lg:text-5xl">
+        <h1 className="text-3xl font-semibold text-center text-gray-900 sm:text-4xl lg:text-5xl">
           {title}
         </h1>
         <PageContent content={content} />

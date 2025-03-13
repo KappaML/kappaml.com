@@ -19,7 +19,7 @@ export const IndexPageTemplate = ({
     <>
       <section className="flex justify-center my-8 text-center">
         <motion.h1 
-          className="text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl lg:text-6xl"
+          className="text-4xl font-semibold leading-tight text-gray-900 sm:text-5xl lg:text-6xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
@@ -39,7 +39,7 @@ export const IndexPageTemplate = ({
         </motion.h2>
       </section>
 
-      <section className="flex items-center justify-center my-8">
+      <section className="flex items-center justify-center my-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ export const IndexPageTemplate = ({
       </section>
 
       <section className="my-16">
-        <h3 className="my-6 text-3xl font-bold text-gray-900">
+        <h3 className="my-6 text-3xl font-semibold text-gray-900">
           {intro.heading}
         </h3>
         <p className="text-xl">
@@ -105,7 +105,7 @@ const IndexPage = ({ data }) => {
     <Layout noContainer>
       <section className="flex justify-center my-8 text-center">
         <motion.h1 
-          className="text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl lg:text-6xl"
+          className="text-4xl font-semibold leading-tight text-gray-900 sm:text-5xl lg:text-6xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
@@ -125,7 +125,7 @@ const IndexPage = ({ data }) => {
         </motion.h2>
       </section>
 
-      <section className="flex items-center justify-center my-8">
+      <section className="flex items-center justify-center my-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -160,7 +160,7 @@ const IndexPage = ({ data }) => {
 
       <section className="my-16">
           <AnimatedGlassCard>
-            <h3 className="my-6 text-3xl font-bold text-gray-900">
+            <h3 className="my-6 text-3xl font-semibold text-gray-900">
               {frontmatter.intro.heading}
           </h3>
           <p className="text-xl">

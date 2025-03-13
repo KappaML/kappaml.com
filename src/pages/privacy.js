@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 const PrivacyPage = () => (
   <Layout>
     <section className="prose lg:prose-lg max-w-none">
-      <h1 className="text-3xl font-bold text-center text-gray-900 sm:text-4xl lg:text-5xl">
+      <h1 className="text-3xl font-semibold text-center text-gray-900 sm:text-4xl lg:text-5xl">
         Privacy Policy
       </h1>
       <div className="mt-8">

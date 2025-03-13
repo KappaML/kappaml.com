@@ -7,7 +7,7 @@ export default function PartnersPage() {
   return (
     <Layout>
       <div className="container px-4 py-16 mx-auto">
-        <h1 className="mb-8 text-4xl font-bold">Our partners</h1>
+        <h1 className="mb-8 text-4xl font-semibold">Our partners</h1>
         
         {/* Featured Partner Section */}
         <div className="p-8 mb-12 bg-white rounded-lg shadow-lg">
