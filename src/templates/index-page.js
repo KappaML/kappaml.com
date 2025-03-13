@@ -72,7 +72,7 @@ export const IndexPageTemplate = ({
         <GatsbyImage className="w-full border rounded-lg shadow-lg" image={heroImage} alt="Hero Image Kappa Architecture Diagram" />
       </section> */}
 
-      <section className="my-8">
+      <section className="my-8 h-[750px]">
         <CLIDemo />
       </section>
 
@@ -154,21 +154,19 @@ const IndexPage = ({ data }) => {
         </motion.div>
       </section>
 
-      <section className="my-8">
+      <section className="my-8 h-[750px]">
         <CLIDemo />
       </section>
 
-      <div className="content-container">
-        <section className="my-16">
-          <h3 className="my-6 text-3xl font-bold text-gray-900">
-            {frontmatter.intro.heading}
-          </h3>
-          <p className="text-xl">
-            {frontmatter.intro.description}
-          </p>
-          <Features features={frontmatter.intro.blurbs} />
-        </section>
-      </div>
+      <section className="my-16">
+        <h3 className="my-6 text-3xl font-bold text-gray-900">
+          {frontmatter.intro.heading}
+        </h3>
+        <p className="text-xl">
+          {frontmatter.intro.description}
+        </p>
+        <Features features={frontmatter.intro.blurbs} />
+      </section>
     </Layout>
   );
 };
