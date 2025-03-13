@@ -159,13 +159,15 @@ const IndexPage = ({ data }) => {
       </section>
 
       <section className="my-16">
-        <h3 className="my-6 text-3xl font-bold text-gray-900">
-          {frontmatter.intro.heading}
-        </h3>
-        <p className="text-xl">
-          {frontmatter.intro.description}
-        </p>
-        <Features features={frontmatter.intro.blurbs} />
+          <AnimatedGlassCard>
+            <h3 className="my-6 text-3xl font-bold text-gray-900">
+              {frontmatter.intro.heading}
+          </h3>
+          <p className="text-xl">
+            {frontmatter.intro.description}
+          </p>
+          <Features features={frontmatter.intro.blurbs} />
+        </AnimatedGlassCard>
       </section>
     </Layout>
   );
