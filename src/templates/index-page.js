@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql, Link } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
+import { motion } from "framer-motion";
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
@@ -17,29 +18,54 @@ export const IndexPageTemplate = ({
   return (
     <>
       <section className="flex justify-center my-8 text-center">
-        <h1 className="text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl lg:text-6xl">
+        <motion.h1 
+          className="text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl lg:text-6xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+        >
           {title}
-        </h1>
+        </motion.h1>
       </section>
 
       <section className="flex justify-center p-4 text-center">
-        <h2 className="text-xl md:text-2xl">
+        <motion.h2 
+          className="text-xl md:text-2xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
+        >
           {heading}
-        </h2>
+        </motion.h2>
       </section>
 
       <section className="flex items-center justify-center my-8">
-        <a
-          className="button"
-          href="https://app.kappaml.com/login"
-          target="_blank"
-          rel="noopener noreferrer"
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
         >
-          Get started
-        </a>
-        <Link to="/contact" className="ml-6 hover:underline">
-          Contact us for more info
-        </Link>
+          <motion.a
+            className="button"
+            href="https://app.kappaml.com/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Get started
+          </motion.a>
+          <motion.div className="inline-block ml-6">
+            <Link 
+              to="/contact" 
+              className="hover:underline"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact us for more info
+            </Link>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* <section className="my-16">
@@ -54,7 +80,9 @@ export const IndexPageTemplate = ({
         <h3 className="my-6 text-3xl font-bold text-gray-900">
           {intro.heading}
         </h3>
-        <p className="text-xl">{intro.description}</p>
+        <p className="text-xl">
+          {intro.description}
+        </p>
         <Features features={intro.blurbs} />
       </section>
     </>
@@ -76,44 +104,71 @@ const IndexPage = ({ data }) => {
   return (
     <Layout noContainer>
       <section className="flex justify-center my-8 text-center">
-        <h1 className="text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl lg:text-6xl">
+        <motion.h1 
+          className="text-4xl font-extrabold leading-tight text-gray-900 sm:text-5xl lg:text-6xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+        >
           {frontmatter.title}
-        </h1>
+        </motion.h1>
       </section>
 
       <section className="flex justify-center p-4 text-center">
-        <h2 className="text-xl md:text-2xl">
+        <motion.h2 
+          className="text-xl md:text-2xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
+        >
           {frontmatter.heading}
-        </h2>
+        </motion.h2>
       </section>
 
       <section className="flex items-center justify-center my-8">
-        <a
-          className="button"
-          href="https://app.kappaml.com/login"
-          target="_blank"
-          rel="noopener noreferrer"
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
         >
-          Get started
-        </a>
-        <Link to="/contact" className="ml-6 hover:underline">
-          Contact us for more info
-        </Link>
+          <motion.a
+            className="button"
+            href="https://app.kappaml.com/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Get started
+          </motion.a>
+          <motion.div className="inline-block ml-6">
+            <Link 
+              to="/contact" 
+              className="hover:underline"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact us for more info
+            </Link>
+          </motion.div>
+        </motion.div>
       </section>
 
       <section className="my-8">
         <CLIDemo />
       </section>
 
-      <AnimatedGlassCard>
+      <div className="content-container">
         <section className="my-16">
           <h3 className="my-6 text-3xl font-bold text-gray-900">
             {frontmatter.intro.heading}
           </h3>
-          <p className="text-xl">{frontmatter.intro.description}</p>
+          <p className="text-xl">
+            {frontmatter.intro.description}
+          </p>
           <Features features={frontmatter.intro.blurbs} />
         </section>
-      </AnimatedGlassCard>
+      </div>
     </Layout>
   );
 };
