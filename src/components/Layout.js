@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import WavesBackground from "../components/WavesBackground";
+import AnimatedGlassCard from "../components/AnimatedGlassCard";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
@@ -47,9 +48,9 @@ const TemplateWrapper = ({ children, noContainer }) => {
       <Navbar />
       <main className="flex-grow p-4 mx-auto lg:p-8 lg:max-w-7xl">
         {noContainer ? children : (
-          <div className="content-container">
+          <AnimatedGlassCard>
             {children}
-          </div>
+          </AnimatedGlassCard>
         )}
       </main>
       <Footer />

@@ -4,11 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
-.content-container {
-  @apply max-w-7xl mx-auto p-6 md:p-8 my-6 bg-slate-50/50 backdrop-blur-md rounded-xl shadow-sm;
-  @apply border border-gray-100;
-}
-
 button {
   @apply focus:outline-none !important;
 }

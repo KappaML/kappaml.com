@@ -6,7 +6,7 @@ import { getImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import CLIDemo from "../components/CLIDemo";
-
+import AnimatedGlassCard from "../components/AnimatedGlassCard";
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
@@ -105,7 +105,7 @@ const IndexPage = ({ data }) => {
         <CLIDemo />
       </section>
 
-      <div className="content-container">
+      <AnimatedGlassCard>
         <section className="my-16">
           <h3 className="my-6 text-3xl font-bold text-gray-900">
             {frontmatter.intro.heading}
@@ -113,7 +113,7 @@ const IndexPage = ({ data }) => {
           <p className="text-xl">{frontmatter.intro.description}</p>
           <Features features={frontmatter.intro.blurbs} />
         </section>
-      </div>
+      </AnimatedGlassCard>
     </Layout>
   );
 };
