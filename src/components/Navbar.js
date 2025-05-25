@@ -6,6 +6,7 @@ import logo from "../img/logo.svg";
 import symbol from "../img/symbol-white.svg";
 
 const navigation = [
+  { name: 'Pricing', href: '/pricing' },
   { name: 'Contact', href: '/contact' },
   { name: 'About', href: '/about' },
   { name: 'Sign in', href: 'https://app.kappaml.com/login', external: true },
