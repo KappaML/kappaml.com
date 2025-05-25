@@ -62,7 +62,7 @@ export const IndexPageTemplate = ({
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Contact us for more info
+              Contact us for a demo
             </Link>
           </motion.div>
         </motion.div>
@@ -148,7 +148,7 @@ const IndexPage = ({ data }) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Contact us for more info
+              Contact us for a demo
             </Link>
           </motion.div>
         </motion.div>
