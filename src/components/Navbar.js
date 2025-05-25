@@ -8,6 +8,7 @@ import symbol from "../img/symbol-white.svg";
 const navigation = [
   { name: 'Contact', href: '/contact' },
   { name: 'About', href: '/about' },
+  { name: 'Sign in', href: 'https://app.kappaml.com/login', external: true },
 ]
 
 function classNames(...classes) {
@@ -42,17 +43,33 @@ const Navbar = class extends React.Component {
                   <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                     <div className="hidden space-x-4 sm:flex sm:mr-6 sm:border-r sm:pr-2">
                       {navigation.map((item) => (
-                        <Link
-                          key={item.name}
-                          to={item.href}
-                          className={classNames(
-                            item.current ? 'bg-gray-900 text-white' : 'hover:bg-gray-700 hover:text-white',
-                            'px-3 py-2 rounded-md'
-                          )}
-                          aria-current={item.current ? 'page' : undefined}
-                        >
-                          {item.name}
-                        </Link>
+                        item.external ? (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={classNames(
+                              item.current ? 'bg-gray-900 text-white' : 'hover:bg-gray-700 hover:text-white',
+                              'px-3 py-2 rounded-md'
+                            )}
+                            aria-current={item.current ? 'page' : undefined}
+                          >
+                            {item.name}
+                          </a>
+                        ) : (
+                          <Link
+                            key={item.name}
+                            to={item.href}
+                            className={classNames(
+                              item.current ? 'bg-gray-900 text-white' : 'hover:bg-gray-700 hover:text-white',
+                              'px-3 py-2 rounded-md'
+                            )}
+                            aria-current={item.current ? 'page' : undefined}
+                          >
+                            {item.name}
+                          </Link>
+                        )
                       ))}
                     </div>
                     <a
@@ -71,20 +88,37 @@ const Navbar = class extends React.Component {
             <Disclosure.Panel className="sm:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 {navigation.map((item) => (
-                  <Disclosure.Button
-                    key={item.name}
-                    as="a"
-                    href={item.href}
-                    className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'hover:bg-gray-700 hover:text-white',
-                      'block px-3 py-2 rounded-md text-base font-medium'
-                    )}
-                    aria-current={item.current ? 'page' : undefined}
-                  >
-                    <Link to={item.href}>
+                  item.external ? (
+                    <Disclosure.Button
+                      key={item.name}
+                      as="a"
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={classNames(
+                        item.current ? 'bg-gray-900 text-white' : 'hover:bg-gray-700 hover:text-white',
+                        'block px-3 py-2 rounded-md text-base font-medium'
+                      )}
+                      aria-current={item.current ? 'page' : undefined}
+                    >
                       {item.name}
-                    </Link>
-                  </Disclosure.Button>
+                    </Disclosure.Button>
+                  ) : (
+                    <Disclosure.Button
+                      key={item.name}
+                      as="a"
+                      href={item.href}
+                      className={classNames(
+                        item.current ? 'bg-gray-900 text-white' : 'hover:bg-gray-700 hover:text-white',
+                        'block px-3 py-2 rounded-md text-base font-medium'
+                      )}
+                      aria-current={item.current ? 'page' : undefined}
+                    >
+                      <Link to={item.href}>
+                        {item.name}
+                      </Link>
+                    </Disclosure.Button>
+                  )
                 ))}
               </div>
             </Disclosure.Panel>
