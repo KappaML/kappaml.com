@@ -88,10 +88,10 @@ const PricingPage = () => {
 
   return (
     <Layout>
-      <div className="container px-4 py-8 sm:py-12 lg:py-16 mx-auto">
+      <div className="container px-2 py-4 sm:px-4 sm:py-8 lg:py-16 mx-auto">
         {/* Header Section */}
         <motion.div 
-          className="text-center mb-8 sm:mb-12 lg:mb-16"
+          className="text-center mb-4 sm:mb-8 lg:mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
@@ -107,7 +107,7 @@ const PricingPage = () => {
 
         {/* Pricing Cards */}
         <motion.div 
-          className="grid gap-6 sm:gap-8 lg:grid-cols-3 lg:gap-12"
+          className="grid gap-4 sm:gap-6 lg:grid-cols-3 lg:gap-12"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -116,7 +116,7 @@ const PricingPage = () => {
             <motion.div
               key={plan.name}
               variants={cardVariants}
-              className={`relative p-6 sm:p-8 bg-white rounded-2xl shadow-lg border-2 transition-all duration-300 hover:shadow-xl ${
+              className={`relative p-4 sm:p-6 lg:p-8 bg-white rounded-2xl shadow-lg border-2 transition-all duration-300 hover:shadow-xl ${
                 plan.coming 
                   ? 'border-primary ring-4 ring-primary/20 scale-105' 
                   : 'border-gray-200 hover:border-primary/50'
@@ -130,7 +130,7 @@ const PricingPage = () => {
                 </div>
               )}
               
-              <div className="text-center mb-6 sm:mb-8">
+              <div className="text-center mb-4 sm:mb-6 lg:mb-8">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-2">
                   {plan.name}
                 </h3>
@@ -149,7 +149,7 @@ const PricingPage = () => {
                 </p>
               </div>
 
-              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <ul className="space-y-2 sm:space-y-3 lg:space-y-4 mb-4 sm:mb-6 lg:mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start">
                     <svg 
@@ -201,17 +201,17 @@ const PricingPage = () => {
 
         {/* FAQ Section */}
         <motion.div 
-          className="mt-12 sm:mt-16 lg:mt-20"
+          className="mt-8 sm:mt-12 lg:mt-20"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8, ease: [0.4, 0, 0.2, 1] }}
         >
-          <h2 className="text-3xl font-semibold text-center text-gray-900 mb-8 sm:mb-12">
+          <h2 className="text-3xl font-semibold text-center text-gray-900 mb-4 sm:mb-8 lg:mb-12">
             Frequently Asked Questions
           </h2>
           
-          <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
-            <div className="space-y-4 sm:space-y-6">
+          <div className="grid gap-4 sm:gap-6 lg:gap-8 md:grid-cols-2">
+            <div className="space-y-3 sm:space-y-4 lg:space-y-6">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   What counts as a prediction?
@@ -244,7 +244,7 @@ const PricingPage = () => {
               </div>
             </div>
             
-            <div className="space-y-4 sm:space-y-6">
+            <div className="space-y-3 sm:space-y-4 lg:space-y-6">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   What happens if I exceed my limits?
@@ -282,7 +282,7 @@ const PricingPage = () => {
 
         {/* CTA Section */}
         <motion.div 
-          className="mt-12 sm:mt-16 lg:mt-20 text-center px-4 py-8 sm:py-12 sm:px-12 bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl"
+          className="mt-8 sm:mt-12 lg:mt-20 text-center px-3 py-6 sm:px-6 sm:py-8 lg:px-12 lg:py-12 bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1, ease: [0.4, 0, 0.2, 1] }}
@@ -290,7 +290,7 @@ const PricingPage = () => {
           <h2 className="text-3xl font-semibold text-gray-900 mb-4">
             Ready to get started?
           </h2>
-          <p className="text-xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-4 sm:mb-6 lg:mb-8 max-w-2xl mx-auto">
             Join the developers who are already building intelligent applications 
             with KappaML's online machine learning platform.
           </p>

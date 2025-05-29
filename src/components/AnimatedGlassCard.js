@@ -11,7 +11,7 @@ const AnimatedGlassCard = ({ children, className = '', delay = 0 }) => {
         delay,
         ease: [0.4, 0, 0.2, 1]
       }}
-      className={`bg-slate-50/50 backdrop-blur-md rounded-xl shadow-sm border border-gray-100 p-6 md:p-8 my-6 ${className}`}
+      className={`bg-slate-50/50 backdrop-blur-md rounded-xl shadow-sm border border-gray-100 p-3 my-2 md:p-8 md:my-6 ${className}`}
     >
       {children}
     </motion.div>

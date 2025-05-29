@@ -6,11 +6,11 @@ import elninoLogo from "../img/partners/elnino-logo.svg";
 export default function PartnersPage() {
   return (
     <Layout>
-      <div className="container px-4 py-16 mx-auto">
-        <h1 className="mb-8 text-4xl font-semibold">Our partners</h1>
+      <div className="container px-2 py-8 sm:px-4 sm:py-12 lg:py-16 mx-auto">
+        <h1 className="mb-4 sm:mb-6 lg:mb-8 text-4xl font-semibold">Our partners</h1>
         
         {/* Featured Partner Section */}
-        <div className="p-8 mb-12 bg-white rounded-lg shadow-lg">
+        <div className="p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8 lg:mb-12 bg-white rounded-lg shadow-lg">
           <div className="flex flex-col items-start md:flex-row md:items-center">
             <a 
               href="https://elnino.tech/?utm_source=kappaml&utm_medium=partners&utm_campaign=implementation_partner" 
@@ -45,7 +45,7 @@ export default function PartnersPage() {
         </div>
 
         {/* Become a Partner Section */}
-        <div className="p-8 mb-12 bg-white rounded-lg shadow-lg">
+        <div className="p-4 sm:p-6 lg:p-8 mb-6 sm:mb-8 lg:mb-12 bg-white rounded-lg shadow-lg">
           <h2 className="mb-4 text-2xl font-semibold">Become a Partner</h2>
           <p className="mb-6 text-gray-600">
             Are you interested in partnering with KappaML? We're always looking for organizations 

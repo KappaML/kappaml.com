@@ -46,7 +46,7 @@ const TemplateWrapper = ({ children, noContainer }) => {
         />
       </Helmet>
       <Navbar />
-      <main className="flex-grow p-4 mx-auto lg:p-8 lg:max-w-7xl">
+      <main className="flex-grow px-2 py-2 mx-auto sm:p-4 lg:p-8 lg:max-w-7xl">
         {noContainer ? children : (
           <AnimatedGlassCard>
             {children}
