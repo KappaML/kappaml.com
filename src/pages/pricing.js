@@ -24,7 +24,7 @@ const PricingPage = () => {
     },
     {
       name: "Professional",
-      price: "€199",
+      price: "€850",
       priceUnit: "/month",
       description: "Ideal for production applications and growing teams",
       features: [

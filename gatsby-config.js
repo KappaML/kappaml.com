@@ -1,4 +1,10 @@
+const adapter = require("gatsby-adapter-netlify").default
+
 module.exports = {
+  adapter: adapter({
+    excludeDatastoreFromEngineFunction: false,
+    imageCDN: false, // Set to true if you want faster builds with remote images
+  }),
   siteMetadata: {
     title: "KappaML",
     description:
