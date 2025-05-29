@@ -36,10 +36,10 @@ const PricingPage = () => {
         "Priority email support",
         "Up to 10 concurrent models",
       ],
-      cta: "Get a demo",
-      ctaLink: "https://app.kappaml.com/signup?plan=professional",
+      cta: "Join waiting list",
+      ctaLink: "/waitlist",
       coming: true,
-      external: true
+      external: false
     },
     {
       name: "Enterprise",
@@ -168,7 +168,7 @@ const PricingPage = () => {
                 ))}
               </ul>
 
-              {!plan.coming && <div className="text-center">
+              <div className="text-center">
                 {plan.external ? (
                   <a
                     href={plan.ctaLink}
@@ -194,7 +194,7 @@ const PricingPage = () => {
                     {plan.cta}
                   </Link>
                 )}
-              </div>}
+              </div>
             </motion.div>
           ))}
         </motion.div>
