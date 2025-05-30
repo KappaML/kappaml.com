@@ -56,7 +56,7 @@ const TemplateWrapper = ({ children, noContainer, pageTitle, pageDescription, pa
         <meta name="publisher" content="KappaML" />
         <meta name="copyright" content="KappaML" />
         <meta name="application-name" content="KappaML" />
-        <meta name="msapplication-TileColor" content="#2563eb" />
+        <meta name="msapplication-TileColor" content="#13A2AD" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
 
         <link
@@ -77,7 +77,7 @@ const TemplateWrapper = ({ children, noContainer, pageTitle, pageDescription, pa
           sizes="16x16"
         />
 
-        <meta name="theme-color" content="#2563eb" />
+        <meta name="theme-color" content="#13A2AD" />
         
         {/* Structured data for better rich snippets */}
         <script type="application/ld+json">
