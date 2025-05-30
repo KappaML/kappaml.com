@@ -103,7 +103,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <Layout noContainer>
+      <Layout noContainer pageType="website">
         <section className="flex justify-center my-8 text-center">
           <motion.h1 
             className="text-4xl font-semibold leading-tight text-gray-900 sm:text-5xl lg:text-6xl"
