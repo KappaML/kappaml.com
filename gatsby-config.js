@@ -6,9 +6,9 @@ module.exports = {
     imageCDN: false, // Set to true if you want faster builds with remote images
   }),
   siteMetadata: {
-    title: "KappaML",
+    title: "KappaML | Online AutoML for Streaming Data",
     description:
-      "Automated Machine Learning as a Service for Streaming Data",
+      "Transform your streaming data into intelligent predictions with KappaML's automated machine learning platform. Deploy adaptive ML models that continuously learn and optimize without retraining. Perfect for real-time analytics, fraud detection, and predictive insights.",
     siteUrl: "https://kappaml.com",
   },
   plugins: [
