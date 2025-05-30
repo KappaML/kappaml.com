@@ -9,7 +9,7 @@ import { withPrefix } from "gatsby";
 
 const TemplateWrapper = ({ children, noContainer, pageTitle, pageDescription, pageImage, pageType = "website" }) => {
   const { title, description } = useSiteMetadata();
-  const siteUrl = "https://kappaml.com";
+  const siteUrl = "https://www.kappaml.com";
   
   // Use page-specific values or fall back to defaults
   const metaTitle = pageTitle || title;

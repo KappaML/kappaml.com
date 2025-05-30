@@ -5,7 +5,6 @@ import { getImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 
 import Layout from "../components/Layout";
-import SEO from "../components/SEO";
 import Features from "../components/Features";
 import CLIDemo from "../components/CLIDemo";
 import AnimatedGlassCard from "../components/AnimatedGlassCard";
@@ -104,11 +103,6 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <SEO 
-        title="KappaML | Online AutoML for Streaming Data"
-        description="Transform your streaming data into intelligent predictions with KappaML's automated machine learning platform. Deploy adaptive ML models that continuously learn and optimize without retraining. Perfect for real-time analytics, fraud detection, and predictive insights."
-        pathname="/"
-      />
       <Layout noContainer>
         <section className="flex justify-center my-8 text-center">
           <motion.h1 

@@ -9,7 +9,7 @@ module.exports = {
     title: "KappaML | Online AutoML for Streaming Data",
     description:
       "Transform your streaming data into intelligent predictions with KappaML's automated machine learning platform. Deploy adaptive ML models that continuously learn and optimize without retraining. Perfect for real-time analytics, fraud detection, and predictive insights.",
-    siteUrl: "https://kappaml.com",
+    siteUrl: "https://www.kappaml.com",
   },
   plugins: [
     "gatsby-plugin-postcss",
