@@ -64,6 +64,17 @@ const TermsPage = () => (
           For any questions about these Terms and Conditions, please contact us through our contact page.
         </p>
 
+        <h2>11. Refund Policy</h2>
+        <p>
+          If you are not satisfied with a paid subscription to KappaML, you may request a refund within 14 days of your initial purchase, provided there has not been substantial usage of the service during that period. Refunds for renewals are generally not offered; you can cancel auto-renewal at any time and your access will continue until the end of the current billing cycle.
+        </p>
+        <p>
+          To request a refund, please contact us through our contact page with your account email, purchase date, and reason for the request. We will review eligibility and respond promptly. Where required by applicable law, you may have additional rights, which are not affected by this policy.
+        </p>
+        <p>
+          Purchases made through third-party marketplaces or resellers are subject to their respective refund policies and must be handled directly with the seller.
+        </p>
+
         <p className="mt-8 text-sm text-gray-500">
           Last updated: {new Date().toISOString().split('T')[0]}
         </p>
