@@ -43,7 +43,7 @@ const PricingPage = () => {
     },
     {
       name: "Enterprise",
-      price: "Custom",
+      price: "Coming soon",
       description: "For large-scale deployments with custom requirements",
       features: [
         "Unlimited predictions",
@@ -57,8 +57,6 @@ const PricingPage = () => {
         "Training & onboarding",
         "24/7 phone support"
       ],
-      cta: "Contact us",
-      ctaLink: "/contact",
       coming: false,
       external: false
     }
@@ -168,33 +166,35 @@ const PricingPage = () => {
                 ))}
               </ul>
 
-              <div className="text-center">
-                {plan.external ? (
-                  <a
-                    href={plan.ctaLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`inline-block w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.coming
-                        ? 'bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl'
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200 border border-gray-300'
-                    }`}
-                  >
-                    {plan.cta}
-                  </a>
-                ) : (
-                  <Link
-                    to={plan.ctaLink}
-                    className={`inline-block w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.coming
-                        ? 'bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl'
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200 border border-gray-300'
-                    }`}
-                  >
-                    {plan.cta}
-                  </Link>
-                )}
-              </div>
+              {plan.cta && (
+                <div className="text-center">
+                  {plan.external ? (
+                    <a
+                      href={plan.ctaLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-block w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                        plan.coming
+                          ? 'bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl'
+                          : 'bg-gray-100 text-gray-900 hover:bg-gray-200 border border-gray-300'
+                      }`}
+                    >
+                      {plan.cta}
+                    </a>
+                  ) : (
+                    <Link
+                      to={plan.ctaLink}
+                      className={`inline-block w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                        plan.coming
+                          ? 'bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl'
+                          : 'bg-gray-100 text-gray-900 hover:bg-gray-200 border border-gray-300'
+                      }`}
+                    >
+                      {plan.cta}
+                    </Link>
+                  )}
+                </div>
+              )}
             </motion.div>
           ))}
         </motion.div>
