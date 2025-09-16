@@ -40,25 +40,6 @@ const PricingPage = () => {
       ctaLink: "/waitlist",
       coming: true,
       external: false
-    },
-    {
-      name: "Enterprise",
-      price: "Coming soon",
-      description: "For large-scale deployments with custom requirements",
-      features: [
-        "Unlimited predictions",
-        "Custom algorithm development",
-        "Dedicated support team",
-        "On-premise deployment options",
-        "Custom integrations",
-        "Unlimited concurrent models",
-        "Advanced security & compliance",
-        "Custom SLA agreements",
-        "Training & onboarding",
-        "24/7 phone support"
-      ],
-      coming: false,
-      external: false
     }
   ];
 
@@ -105,7 +86,7 @@ const PricingPage = () => {
 
         {/* Pricing Cards */}
         <motion.div 
-          className="grid gap-4 sm:gap-6 lg:grid-cols-3 lg:gap-12"
+          className="grid gap-4 sm:gap-6 lg:grid-cols-2 lg:gap-12 max-w-4xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -261,7 +242,7 @@ const PricingPage = () => {
                   Do you offer custom solutions?
                 </h3>
                 <p className="text-gray-600">
-                  Absolutely! We offer custom solutions for both Professional and Enterprise customers in collaboration with 
+                  Absolutely! We offer custom solutions for Professional customers in collaboration with 
                   our <Link to="/partners" className="text-primary hover:underline">partners</Link>.
                 </p>
               </div>
@@ -271,9 +252,8 @@ const PricingPage = () => {
                   What support do you provide?
                 </h3>
                 <p className="text-gray-600">
-                  Support varies by plan: basic email support for Starter, priority email 
-                  for Professional, and dedicated support teams with 24/7 phone access 
-                  for Enterprise customers, depending on needs and budget.
+                  Support varies by plan: basic email support for Starter and priority email 
+                  support for Professional customers.
                 </p>
               </div>
             </div>
