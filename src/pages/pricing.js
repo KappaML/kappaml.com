@@ -7,7 +7,7 @@ const PricingPage = () => {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "Free",
+      price: "Free forever",
       description: "Perfect for startups and experimentation",
       features: [
         "Up to 100 predictions/second",

@@ -55,7 +55,7 @@ export default () => (
             rel="noopener noreferrer"
             className="inline-block px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300"
           >
-            Try Starter Plan (Free)
+            Try Starter Plan (Free forever)
           </a>
           <Link
             to="/"
