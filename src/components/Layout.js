@@ -17,9 +17,13 @@ const TemplateWrapper = ({ children, noContainer, pageTitle, pageDescription, pa
   const metaImage = pageImage || `${siteUrl}/img/meta/og-image.png`;
   
   return (
-    <div className="flex flex-col min-h-screen text-gray-700 font-['Noto_Sans'] relative">
+    <div className="flex flex-col min-h-screen text-gray-700 dark:text-gray-300 font-['Noto_Sans'] relative">
       <WavesBackground />
-      <Helmet>
+      <Helmet
+        bodyAttributes={{
+          class: 'bg-white dark:bg-gray-900'
+        }}
+      >
         <html lang="en" />
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
@@ -96,6 +100,7 @@ const TemplateWrapper = ({ children, noContainer, pageTitle, pageDescription, pa
             ]
           })}
         </script>
+        <script src={`${withPrefix("/")}theme-script.js`} type="text/javascript" />
       </Helmet>
       <Navbar />
       <main className="flex-grow px-2 py-2 mx-auto sm:p-4 lg:p-8 lg:max-w-7xl">

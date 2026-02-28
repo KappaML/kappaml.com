@@ -2,10 +2,18 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         "primary": "#13A2AD",
+        "primary-dark": "#0D7370",
+        cyan: {
+          300: "#67e8f9",
+          400: "#22d3ee",
+          500: "#06b6d4",
+          600: "#0891b2",
+        },
       },
       keyframes: {
         wave: {

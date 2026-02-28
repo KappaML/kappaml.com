@@ -12,9 +12,9 @@ const FeatureGrid = ({ features }) => (
             <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-md bg-primary">
               <PreviewCompatibleImage imageInfo={item} />
             </div>
-            <p className="ml-16 text-lg font-medium leading-6 text-gray-900">{item.name}</p>
+            <p className="ml-16 text-lg font-medium leading-6 text-gray-900 dark:text-white">{item.name}</p>
           </dt>
-          <dd className="mt-2 ml-16">{item.text}</dd>
+          <dd className="mt-2 ml-16 text-gray-600 dark:text-gray-400">{item.text}</dd>
         </div>
       ))}
     </dl>

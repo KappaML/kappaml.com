@@ -3,11 +3,11 @@ import Layout from "../components/Layout";
 
 const PrivacyPage = () => (
   <Layout>
-    <section className="prose lg:prose-lg max-w-none">
-      <h1 className="text-3xl font-semibold text-center text-gray-900 sm:text-4xl lg:text-5xl">
+    <section className="prose lg:prose-lg max-w-none dark:prose-invert">
+      <h1 className="text-3xl font-semibold text-center text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">
         Privacy Policy
       </h1>
-      <div className="mt-8">
+      <div className="mt-8 text-gray-800 dark:text-gray-300">
         <h2>1. Introduction</h2>
         <p>
           At KappaML, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.
@@ -91,7 +91,7 @@ const PrivacyPage = () => (
           If you have any questions about this Privacy Policy, please contact us through our contact page.
         </p>
 
-        <p className="mt-8 text-sm text-gray-500">
+        <p className="mt-8 text-sm text-gray-500 dark:text-gray-400">
           Last updated: {new Date().toISOString().split('T')[0]}
         </p>
       </div>

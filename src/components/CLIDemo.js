@@ -122,9 +122,9 @@ const CLIDemo = () => {
 
   return (
     <div className="w-full max-w-4xl mx-auto my-8">
-      <div className="bg-gray-900 rounded-lg shadow-lg overflow-hidden relative">
+      <div className="bg-gray-900 dark:bg-slate-900 rounded-lg shadow-xl overflow-hidden relative border border-gray-800 dark:border-slate-800">
         {/* Terminal Header */}
-        <div className="flex items-center px-4 py-2 bg-gray-800">
+        <div className="flex items-center px-4 py-2 bg-gray-800 dark:bg-slate-800/80">
           <div className="flex space-x-2">
             <div className="w-3 h-3 rounded-full bg-red-500"></div>
             <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -137,7 +137,7 @@ const CLIDemo = () => {
 
         {/* Progress Bar */}
         {autoRotate && (
-          <div className="w-full h-1 bg-gray-800">
+          <div className="w-full h-1 bg-gray-800 dark:bg-slate-800">
             <div 
               className="h-full bg-blue-500/30 transition-all duration-100 ease-linear"
               style={{ width: `${progress}%` }}
@@ -152,8 +152,8 @@ const CLIDemo = () => {
               key={cmd}
               className={`px-4 py-2 text-sm font-mono ${
                 activeTab === cmd
-                  ? 'text-white bg-gray-700'
-                  : 'text-gray-400 hover:text-white hover:bg-gray-800'
+                  ? 'text-white bg-gray-700 dark:bg-slate-800'
+                  : 'text-gray-400 hover:text-white hover:bg-gray-800 dark:hover:bg-slate-800/50'
               }`}
               onClick={() => handleTabClick(cmd)}
             >
@@ -177,7 +177,7 @@ const CLIDemo = () => {
           {showResponse && (
             <div className="mt-4 transition-all duration-500 ease-in-out">
               <div className="text-gray-400 font-mono mb-2">Response:</div>
-              <pre className="text-blue-400 font-mono text-base sm:text-lg whitespace-pre-wrap overflow-x-auto bg-gray-800 p-4 rounded">
+              <pre className="text-blue-400 font-mono text-base sm:text-lg whitespace-pre-wrap overflow-x-auto bg-gray-800 dark:bg-slate-800 p-4 rounded">
                 <code>{responses[activeTab]}</code>
               </pre>
             </div>

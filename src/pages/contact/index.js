@@ -37,8 +37,8 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <section>
-          <h1 className="text-3xl font-semibold text-center text-gray-900 sm:text-4xl lg:text-5xl">Contact us</h1>
-          <p className="my-8 text-xl text-center text-gray-500">Send us a message using the form below and we will contact you back soon.</p>
+          <h1 className="text-3xl font-semibold text-center text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">Contact us</h1>
+          <p className="my-8 text-xl text-center text-gray-500 dark:text-gray-400">Send us a message using the form below and we will contact you back soon.</p>
           <form
             name="contact"
             method="post"
@@ -57,7 +57,7 @@ export default class Index extends React.Component {
               </label>
             </div>
             <div className="mb-6">
-              <label htmlFor={"name"} className="block mb-2 text-sm font-medium text-gray-700">
+              <label htmlFor={"name"} className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
                 Your name
               </label>
               <div>
@@ -67,13 +67,13 @@ export default class Index extends React.Component {
                   onChange={this.handleChange}
                   id={"name"}
                   required={true}
-                  className="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
+                  className="w-full px-4 py-2 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
                   placeholder="John Doe"
                 />
               </div>
             </div>
             <div className="mb-6">
-              <label htmlFor={"email"} className="block mb-2 text-sm font-medium text-gray-700">
+              <label htmlFor={"email"} className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
                 Email
               </label>
               <div>
@@ -83,13 +83,13 @@ export default class Index extends React.Component {
                   onChange={this.handleChange}
                   id={"email"}
                   required={true}
-                  className="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
+                  className="w-full px-4 py-2 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
                   placeholder="john@example.com"
                 />
               </div>
             </div>
             <div className="mb-6">
-              <label htmlFor={"phone"} className="block mb-2 text-sm font-medium text-gray-700">
+              <label htmlFor={"phone"} className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
                 Phone
               </label>
               <div>
@@ -99,13 +99,13 @@ export default class Index extends React.Component {
                   onChange={this.handleChange}
                   id={"phone"}
                   required={false}
-                  className="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
+                  className="w-full px-4 py-2 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
                   placeholder="+31 6 1234 5678"
                 />
               </div>
             </div>
             <div className="mb-6">
-              <label htmlFor={"company"} className="block mb-2 text-sm font-medium text-gray-700">
+              <label htmlFor={"company"} className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
                 Company
               </label>
               <div>
@@ -115,13 +115,13 @@ export default class Index extends React.Component {
                   onChange={this.handleChange}
                   id={"company"}
                   required={false}
-                  className="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
+                  className="w-full px-4 py-2 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
                   placeholder="Company name"
                 />
               </div>
             </div>
             <div className="mb-6">
-              <label htmlFor={"message"} className="block mb-2 text-sm font-medium text-gray-700">
+              <label htmlFor={"message"} className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
                 Message
               </label>
               <div>
@@ -131,7 +131,7 @@ export default class Index extends React.Component {
                   id={"message"}
                   required={true}
                   rows={4}
-                  className="w-full px-4 py-2 text-gray-900 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
+                  className="w-full px-4 py-2 text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary focus:outline-none"
                   placeholder="How can we help you?"
                 />
               </div>
@@ -144,9 +144,9 @@ export default class Index extends React.Component {
                   onChange={this.handleChange}
                   id={"newsletter"}
                   required={false}
-                  className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+                  className="w-4 h-4 text-primary bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700 rounded focus:ring-primary"
                 />
-                <span className="ml-2 text-sm text-gray-700">Keep me informed with about KappaML news and updates.</span>
+                <span className="ml-2 text-sm text-gray-700 dark:text-gray-300">Keep me informed with about KappaML news and updates.</span>
               </label>
             </div>
             <div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { Disclosure } from '@headlessui/react'
-import { Bars3Icon as MenuIcon, XMarkIcon as XIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon as MenuIcon, XMarkIcon as XIcon, SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 import logo from "../img/logo.svg";
 import symbol from "../img/symbol-white.svg";
 
@@ -51,7 +51,7 @@ const Navbar = class extends React.Component {
                             target="_blank"
                             rel="noopener noreferrer"
                             className={classNames(
-                              item.current ? 'bg-gray-900 text-white' : 'hover:bg-gray-700 hover:text-white',
+                              item.current ? 'bg-gray-900 text-white' : 'hover:bg-gray-700 hover:text-white dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white',
                               'px-3 py-2 rounded-md'
                             )}
                             aria-current={item.current ? 'page' : undefined}
@@ -63,7 +63,7 @@ const Navbar = class extends React.Component {
                             key={item.name}
                             to={item.href}
                             className={classNames(
-                              item.current ? 'bg-gray-900 text-white' : 'hover:bg-gray-700 hover:text-white',
+                              item.current ? 'bg-gray-900 text-white' : 'hover:bg-gray-700 hover:text-white dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white',
                               'px-3 py-2 rounded-md'
                             )}
                             aria-current={item.current ? 'page' : undefined}
@@ -73,6 +73,26 @@ const Navbar = class extends React.Component {
                         )
                       ))}
                     </div>
+                    <button
+                      onClick={() => {
+                        const htmlClass = document.documentElement.classList;
+                        if (htmlClass.contains('dark')) {
+                          htmlClass.remove('dark');
+                          localStorage.theme = 'light';
+                        } else {
+                          htmlClass.add('dark');
+                          localStorage.theme = 'dark';
+                        }
+                        this.forceUpdate(); // Re-render to update icon
+                      }}
+                      className="p-2 mr-4 text-gray-500 rounded-md hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white focus:outline-none"
+                    >
+                      {typeof document !== 'undefined' && document.documentElement.classList.contains('dark') ? (
+                        <SunIcon className="w-5 h-5" aria-hidden="true" />
+                      ) : (
+                        <MoonIcon className="w-5 h-5" aria-hidden="true" />
+                      )}
+                    </button>
                     <a
                       href="https://app.kappaml.com/login"
                       target="_blank"
@@ -86,7 +106,7 @@ const Navbar = class extends React.Component {
               </div>
             </div>
 
-            <Disclosure.Panel className="sm:hidden">
+            <Disclosure.Panel className="sm:hidden dark:bg-gray-900">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 {navigation.map((item) => (
                   item.external ? (
@@ -97,7 +117,7 @@ const Navbar = class extends React.Component {
                       target="_blank"
                       rel="noopener noreferrer"
                       className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'hover:bg-gray-700 hover:text-white',
+                        item.current ? 'bg-gray-900 text-white' : 'hover:bg-gray-700 hover:text-white dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white',
                         'block px-3 py-2 rounded-md text-base font-medium'
                       )}
                       aria-current={item.current ? 'page' : undefined}
@@ -110,7 +130,7 @@ const Navbar = class extends React.Component {
                       as="a"
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'hover:bg-gray-700 hover:text-white',
+                        item.current ? 'bg-gray-900 text-white' : 'hover:bg-gray-700 hover:text-white dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white',
                         'block px-3 py-2 rounded-md text-base font-medium'
                       )}
                       aria-current={item.current ? 'page' : undefined}

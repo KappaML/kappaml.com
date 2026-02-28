@@ -19,45 +19,45 @@ const Footer = class extends React.Component {
           </div>
           <div className="flex flex-col">
             <div className="mb-2 uppercase">Company</div>
-            <Link to="/about" className="mt-2">About</Link>
-            <Link to="/contact" className="mt-2">Contact</Link>
-            <Link to="/about#careers" className="mt-2">Careers</Link>
-            <Link to="/terms" className="mt-2">Terms</Link>
-            <Link to="/privacy" className="mt-2">Privacy</Link>
+            <Link to="/about" className="mt-2 text-gray-400 hover:text-white dark:hover:text-primary">About</Link>
+            <Link to="/contact" className="mt-2 text-gray-400 hover:text-white dark:hover:text-primary">Contact</Link>
+            <Link to="/about#careers" className="mt-2 text-gray-400 hover:text-white dark:hover:text-primary">Careers</Link>
+            <Link to="/terms" className="mt-2 text-gray-400 hover:text-white dark:hover:text-primary">Terms</Link>
+            <Link to="/privacy" className="mt-2 text-gray-400 hover:text-white dark:hover:text-primary">Privacy</Link>
           </div>
           <div className="flex flex-col">
             <div className="mb-2 uppercase">Community</div>
             <a href="https://github.com/KappaML"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2">
+              className="mt-2 text-gray-400 hover:text-white dark:hover:text-primary">
               GitHub
             </a>
             <a href="https://www.linkedin.com/company/kappaml"
               target="_blank"
-              rel="noopener noreferrer" className="mt-2">
+              rel="noopener noreferrer" className="mt-2 text-gray-400 hover:text-white dark:hover:text-primary">
               LinkedIn
             </a>
-            <Link to="/partners" className="mt-2">Partners</Link>
+            <Link to="/partners" className="mt-2 text-gray-400 hover:text-white dark:hover:text-primary">Partners</Link>
           </div>
           <div className="flex flex-col">
             <div className="mb-2 uppercase">Developers</div>
             <a href="https://api.kappaml.com/docs"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2">
+              className="mt-2 text-gray-400 hover:text-white dark:hover:text-primary">
               OpenAPI Docs
             </a>
             <a href="https://api.kappaml.com/redoc"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2">
+              className="mt-2 text-gray-400 hover:text-white dark:hover:text-primary">
               ReDocs
             </a>
             <a href="https://status.kappaml.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2">
+              className="mt-2 text-gray-400 hover:text-white dark:hover:text-primary">
               Status
             </a>
           </div>
@@ -85,7 +85,7 @@ const Footer = class extends React.Component {
                   type="email" 
                   name="email" 
                   required 
-                  className="w-full px-4 py-2 mr-3 text-gray-200 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" 
+                  className="w-full px-4 py-2 mr-3 text-gray-200 bg-gray-700 dark:bg-gray-900 border border-gray-600 dark:border-gray-700 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" 
                   placeholder="Your email" 
                 />
                 <button type="submit" className="px-6 py-2 text-white bg-primary rounded-lg hover:bg-primary/80 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-gray-800">Subscribe</button>

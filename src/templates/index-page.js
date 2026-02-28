@@ -58,7 +58,7 @@ export const IndexPageTemplate = ({
           <motion.div className="inline-block ml-6">
             <Link 
               to="/contact" 
-              className="hover:underline"
+              className="text-gray-900 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:underline"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -77,10 +77,10 @@ export const IndexPageTemplate = ({
       </section>
 
       <section className="my-16">
-        <h3 className="my-6 text-3xl font-semibold text-gray-900">
+        <h3 className="my-6 text-3xl font-semibold text-gray-900 dark:text-white">
           {intro.heading}
         </h3>
-        <p className="text-xl">
+        <p className="text-xl dark:text-gray-300">
           {intro.description}
         </p>
         <Features features={intro.blurbs} />
@@ -106,7 +106,7 @@ const IndexPage = ({ data }) => {
       <Layout noContainer pageType="website">
         <section className="flex justify-center my-8 text-center">
           <motion.h1 
-            className="text-4xl font-semibold leading-tight text-gray-900 sm:text-5xl lg:text-6xl"
+            className="text-4xl font-semibold leading-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
@@ -117,7 +117,7 @@ const IndexPage = ({ data }) => {
 
         <section className="flex justify-center p-4 text-center">
           <motion.h2 
-            className="text-xl md:text-2xl"
+            className="text-xl md:text-2xl dark:text-gray-300"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
@@ -145,7 +145,7 @@ const IndexPage = ({ data }) => {
             <motion.div className="inline-block ml-6">
               <Link 
                 to="/contact" 
-                className="hover:underline"
+                className="text-gray-900 dark:text-gray-300 hover:text-primary dark:hover:text-primary hover:underline"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -161,10 +161,10 @@ const IndexPage = ({ data }) => {
 
         <section className="my-16">
             <AnimatedGlassCard>
-              <h3 className="my-6 text-3xl font-semibold text-gray-900">
+              <h3 className="my-6 text-3xl font-semibold text-gray-900 dark:text-white">
                 {frontmatter.intro.heading}
             </h3>
-            <p className="text-xl">
+            <p className="text-xl dark:text-gray-300">
               {frontmatter.intro.description}
             </p>
             <Features features={frontmatter.intro.blurbs} />

@@ -75,10 +75,10 @@ const PricingPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
         >
-          <h1 className="mb-4 text-4xl font-semibold text-gray-900 sm:text-5xl lg:text-6xl">
+          <h1 className="mb-4 text-4xl font-semibold text-gray-900 dark:text-white sm:text-5xl lg:text-6xl">
             Pricing plans
           </h1>
-          <p className="mx-auto text-xl text-gray-600 max-w-3xl">
+          <p className="mx-auto text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
             Choose the perfect plan for your online machine learning needs. 
             Start free and scale as you grow.
           </p>
@@ -95,10 +95,10 @@ const PricingPage = () => {
             <motion.div
               key={plan.name}
               variants={cardVariants}
-              className={`relative p-4 sm:p-6 lg:p-8 bg-white rounded-2xl shadow-lg border-2 transition-all duration-300 hover:shadow-xl ${
+              className={`relative p-4 sm:p-6 lg:p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border-2 transition-all duration-300 hover:shadow-xl ${
                 plan.coming 
-                  ? 'border-primary ring-4 ring-primary/20 scale-105' 
-                  : 'border-gray-200 hover:border-primary/50'
+                  ? 'border-primary ring-4 ring-primary/20 scale-105 dark:ring-primary/10' 
+                  : 'border-gray-200 dark:border-gray-700 hover:border-primary/50 dark:hover:border-primary/50'
               }`}
             >
               {plan.coming && (
@@ -110,20 +110,20 @@ const PricingPage = () => {
               )}
               
               <div className="text-center mb-4 sm:mb-6 lg:mb-8">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
                   {plan.name}
                 </h3>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold text-gray-900">
+                  <span className="text-4xl font-bold text-gray-900 dark:text-white">
                     {plan.price}
                   </span>
                   {plan.priceUnit && (
-                    <span className="text-gray-600 ml-1">
+                    <span className="text-gray-600 dark:text-gray-400 ml-1">
                       {plan.priceUnit}
                     </span>
                   )}
                 </div>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-400">
                   {plan.description}
                 </p>
               </div>
@@ -142,7 +142,7 @@ const PricingPage = () => {
                         clipRule="evenodd" 
                       />
                     </svg>
-                    <span className="text-gray-700">{feature}</span>
+                    <span className="text-gray-700 dark:text-gray-300">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -157,7 +157,7 @@ const PricingPage = () => {
                       className={`inline-block w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                         plan.coming
                           ? 'bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl'
-                          : 'bg-gray-100 text-gray-900 hover:bg-gray-200 border border-gray-300'
+                          : 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 border border-gray-300 dark:border-gray-600'
                       }`}
                     >
                       {plan.cta}
@@ -168,7 +168,7 @@ const PricingPage = () => {
                       className={`inline-block w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                         plan.coming
                           ? 'bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl'
-                          : 'bg-gray-100 text-gray-900 hover:bg-gray-200 border border-gray-300'
+                          : 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 border border-gray-300 dark:border-gray-600'
                       }`}
                     >
                       {plan.cta}
@@ -187,37 +187,37 @@ const PricingPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8, ease: [0.4, 0, 0.2, 1] }}
         >
-          <h2 className="text-3xl font-semibold text-center text-gray-900 mb-4 sm:mb-8 lg:mb-12">
+          <h2 className="text-3xl font-semibold text-center text-gray-900 dark:text-white mb-4 sm:mb-8 lg:mb-12">
             Frequently Asked Questions
           </h2>
           
           <div className="grid gap-4 sm:gap-6 lg:gap-8 md:grid-cols-2">
             <div className="space-y-3 sm:space-y-4 lg:space-y-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   What counts as a prediction?
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-400">
                   A prediction is counted each time your model processes a single set of features 
                   and returns a result.
                 </p>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   Can I change plans anytime?
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-400">
                   Yes! You can upgrade or downgrade your plan at any time. Changes take 
                   effect immediately.
                 </p>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   Is there a free trial?
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-400">
                   The Starter plan is completely free forever and offers a good representation of our platform.
                   There is no free trial for the Professional plan, but you can get a free 
                   demo by <Link to="/contact" className="text-primary hover:underline">contacting us</Link>.
@@ -227,10 +227,10 @@ const PricingPage = () => {
             
             <div className="space-y-3 sm:space-y-4 lg:space-y-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   What happens if I exceed my limits?
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-400">
                   We'll notify you when you approach your limits. For the Starter plan, 
                   predictions will be throttled. Paid plans have overage protection 
                   and automatic scaling options.
@@ -238,20 +238,20 @@ const PricingPage = () => {
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   Do you offer custom solutions?
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-400">
                   Absolutely! We offer custom solutions for Professional customers in collaboration with 
                   our <Link to="/partners" className="text-primary hover:underline">partners</Link>.
                 </p>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   What support do you provide?
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-400">
                   Support varies by plan: basic email support for Starter and priority email 
                   support for Professional customers.
                 </p>
@@ -267,10 +267,10 @@ const PricingPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1, ease: [0.4, 0, 0.2, 1] }}
         >
-          <h2 className="text-3xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-4">
             Ready to get started?
           </h2>
-          <p className="text-xl text-gray-600 mb-4 sm:mb-6 lg:mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 lg:mb-8 max-w-2xl mx-auto">
             Join the developers who are already building intelligent applications 
             with KappaML's online machine learning platform.
           </p>
@@ -285,7 +285,7 @@ const PricingPage = () => {
             </a>
             <Link
               to="/contact"
-              className="inline-block px-8 py-4 bg-white text-gray-900 rounded-lg font-semibold border border-gray-300 hover:bg-gray-50 transition-all duration-300"
+              className="inline-block px-8 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg font-semibold border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300"
             >
               Contact Sales
             </Link>

@@ -10,8 +10,8 @@ export const SolutionsPageTemplate = ({ title, content, contentComponent }) => {
 
   return (
     <section className="py-12">
-      <article className="prose lg:prose-lg max-w-none">
-        <h1 className="text-3xl font-semibold text-center text-gray-900 sm:text-4xl lg:text-5xl mb-8">
+      <article className="prose lg:prose-lg max-w-none dark:prose-invert">
+        <h1 className="text-3xl font-semibold text-center text-gray-900 dark:text-white sm:text-4xl lg:text-5xl mb-8">
           {title}
         </h1>
         <PageContent content={content} />

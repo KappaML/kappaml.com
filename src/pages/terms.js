@@ -3,11 +3,11 @@ import Layout from "../components/Layout";
 
 const TermsPage = () => (
   <Layout>
-    <section className="prose lg:prose-lg max-w-none">
-      <h1 className="text-3xl font-semibold text-center text-gray-900 sm:text-4xl lg:text-5xl">
+    <section className="prose lg:prose-lg max-w-none dark:prose-invert">
+      <h1 className="text-3xl font-semibold text-center text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">
         Terms and Conditions
       </h1>
-      <div className="mt-8">
+      <div className="mt-8 text-gray-800 dark:text-gray-300">
         <h2>1. Acceptance of Terms</h2>
         <p>
           By accessing and using KappaML's services, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.
@@ -75,7 +75,7 @@ const TermsPage = () => (
           Purchases made through third-party marketplaces or resellers are subject to their respective refund policies and must be handled directly with the seller.
         </p>
 
-        <p className="mt-8 text-sm text-gray-500">
+        <p className="mt-8 text-sm text-gray-500 dark:text-gray-400">
           Last updated: {new Date().toISOString().split('T')[0]}
         </p>
       </div>
