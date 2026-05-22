@@ -72,7 +72,7 @@ export const IndexPageTemplate = ({
         <GatsbyImage className="w-full border rounded-lg shadow-lg" image={heroImage} alt="Hero Image Kappa Architecture Diagram" />
       </section> */}
 
-      <section className="my-8 h-[750px]">
+      <section className="my-8 min-h-[560px] md:min-h-[640px]">
         <CLIDemo />
       </section>
 
@@ -155,7 +155,7 @@ const IndexPage = ({ data }) => {
           </motion.div>
         </section>
 
-        <section className="my-8 h-[750px]">
+        <section className="my-8 min-h-[560px] md:min-h-[640px]">
           <CLIDemo />
         </section>
 
