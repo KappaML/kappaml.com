@@ -26,7 +26,7 @@ intro:
         Address a growing spectrum of business challenges with our extensive library
         of online machine learning algorithms optimized for classification, regression,
         and time series forecasting.
-  heading: Why Choose KappaML for Online AutoML?
+  heading: Why KappaML for Online AutoML?
   description: "Traditional machine learning development requires significant expertise
     and resources for model selection, hyperparameter tuning, and periodic retraining.
     KappaML transforms this paradigm by offering a streamlined solution that continuously
