@@ -1,0 +1,38 @@
+# KappaML
+
+> Online Automated Machine Learning (AutoML) for Streaming Data.
+
+- Website: https://www.kappaml.com
+- API Documentation: https://api.kappaml.com/docs
+- ReDocs: https://api.kappaml.com/redoc
+- Status: https://status.kappaml.com
+- GitHub: https://github.com/KappaML
+- Architecture: Stream-first Kappa architecture, continuous incremental learning, built on top of River (the leading Python library for online ML).
+
+## Overview
+
+KappaML is an online Automated Machine Learning (AutoML) platform built specifically for streaming and real-time data. Traditional machine learning workflows rely on batch processing, requiring heavy computational pipelines to store static data, train models offline, and run periodic retraining cycles to combat concept drift. KappaML replaces this paradigm with a continuous learning system that incrementally learns from streaming data sample by sample, updating models on the fly with zero retraining downtime and minimal operational overhead.
+
+## Key Features
+
+- **Adaptive Learning & Drift Mitigation**: Automatically detects and adapts to concept drift and evolving data distributions in real time without requiring manual retraining interventions.
+- **Continuous Online AutoML**: Automatically explores and optimizes online model pipelines, hyperparameters, and feature transformations continuously on live data streams.
+- **Resource & Compute Efficiency**: Operates with a constant memory and compute footprint per sample, dramatically reducing cloud infrastructure costs compared to batch training clusters and GPU farms.
+- **Zero Retraining Cycles**: Eliminates stale models and batch retraining windows—models are always current as of the latest received event.
+- **Broad Algorithm Support**: Supports online classification, streaming regression, real-time anomaly detection, and online time series forecasting.
+- **Developer-Centric APIs**: Clean REST and OpenAPI interfaces enable rapid deployment and seamless integration into existing streaming pipelines (Kafka, Flink, event streams).
+- **River Integration**: Built on top of River, the premier open-source Python library for online machine learning, extending its foundations with enterprise AutoML, orchestration, and monitoring.
+
+## Why KappaML?
+
+1. **Kappa Architecture**: Named after the big data paradigm that advocates for a pure streaming architecture with a single processing code path, overcoming the complexity and maintenance burdens of Lambda architectures.
+2. **Cohen's Kappa Coefficient (κ)**: Inspired by the statistical metric measuring inter-rater agreement while accounting for chance, embodying KappaML's commitment to rigorous, reliable model evaluation in dynamic environments.
+3. **Japanese Folklore**: In Japanese folklore, the Kappa is an amphibious water deity dwelling in flowing rivers and streams, mirroring KappaML's dedication to continuous, flowing data streams.
+
+## Industry Solutions
+
+- **Real-Time Fraud Detection** (https://www.kappaml.com/solutions/real-time-fraud-detection): Financial services, payments, and e-commerce. Detects emerging fraud patterns 10x faster and reduces false positives by 40% with self-adjusting risk thresholds.
+- **Predictive Maintenance for Industry 4.0** (https://www.kappaml.com/solutions/predictive-maintenance): Manufacturing, energy, transportation, and IoT. Reduces unplanned downtime by 75% and extends equipment lifespan by up to 40% via continuous multi-sensor stream intelligence.
+- **Real-Time Personalization Engine** (https://www.kappaml.com/solutions/real-time-personalization): E-commerce, digital media, and gaming. Adapts user preference models instantly with every click and interaction to achieve 3x higher user engagement.
+- **Adaptive Network Security Monitoring** (https://www.kappaml.com/solutions/network-security-monitoring): Cyber defense against zero-day exploits, advanced persistent threats (APTs), and behavioral anomalies across network traffic.
+- **Smart City Traffic Optimization** (https://www.kappaml.com/solutions/smart-city-traffic-optimization): Urban mobility, adaptive signal control, and real-time congestion forecasting.
